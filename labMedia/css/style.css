@@ -75,7 +75,7 @@ header .group-block .menu div{
 	height: 30px;
 }
 header .group-block .menu div img{
-	width: 50%;
+	width: 70%;
 	height: 50%;
 	
 }
@@ -85,9 +85,11 @@ header .panel-navigation{
 	padding-top: 8px;
 	padding-right: 38px;
 }
-header .panel-navigation div{
+header .panel-navigation > div{
+	/*width: 53px;*/
 	margin-left: 18px;
 }
+
 header .panel-navigation div.toolbar img{
 	border-radius: 50px;
 }
@@ -167,6 +169,7 @@ main .block-content .main-content p{
 
 .wrap{
   position: relative;
+  box-sizing: border-box;
   margin-right: 78px;
 }
 .slide{
@@ -295,7 +298,7 @@ main .seo-info .tags a{
 	font-size: 12px;
 	/*font-family: "DINPro";*/
 	color: rgb( 102, 102, 102 );
-	line-height: 2;
+	line-height: 3em;
 	text-align: left;
 }
 
@@ -372,12 +375,13 @@ main .partners .sort ul li p{
 }
 main .partners .list-partners{
 	display: flex;
+	justify-content: space-around;
 	flex-wrap: wrap;
 	margin-top: 36px;
 }
 main .partners .list-partners .partner{
 	display: flex;
-	padding-right: 50px;
+	/*padding-right: 50px;*/
 	margin-bottom: 40px;
 }
 main .partners .list-partners .partner .icon{
@@ -407,7 +411,7 @@ main .partners .list-partners .partner .icon-3{
 	background-image: url('../images/icon-2.png');
 }
 main .partners .list-partners .partner .partner-info{
-	width: 235px;
+	max-width: 235px;
 	padding-left: 15px;
 }
 main .partners .list-partners .partner .partner-info h4{
@@ -492,11 +496,10 @@ main .popular-courses .course{
 	box-shadow: 0 1px 5px 4px rgba(204, 217, 228, 1); 
 	margin-bottom: 15px;
 	max-width: 780px;
-	max-height: 215px;
 	box-sizing: border-box;
 }
 main .popular-courses .course .course-info{
-	
+	box-sizing: border-box;
 }
 
 main .popular-courses .course .course-info > a{
@@ -510,9 +513,7 @@ main .popular-courses .course .course-info > a{
 }
 
 main .popular-courses .course .course-info h4{
-	/*font-family: "DINPro";*/
 	color: rgb( 0, 0, 0 );
-	/*line-height: 1.357;*/
 	text-align: left;
 	margin: 6px 0;
 }
@@ -541,6 +542,7 @@ main .popular-courses .course .course-info .course-tags a{
 
 main .popular-courses .course .course-info .stat{
 	display: flex;
+	flex-wrap: wrap;
 	padding-top: 13px;
 }
 main .popular-courses .course .course-info .stat p{
@@ -558,10 +560,7 @@ main .popular-courses .course .course-info .stat p span{
 	margin-left: 5px;
 }
 main .popular-courses .course .course-info .stat p img{
-	/*display: flex;*/
-
 	width: 45%;
-	height: 45%;
 }
 main .popular-courses .course .chosen-button{
 	position: absolute;
@@ -830,7 +829,7 @@ footer p{
 @media screen and (max-width: 320px){
 
 	main{
-		padding: 0 30px;
+		padding: 0 20px;
 	}
 
 	header .group-block {
@@ -867,8 +866,17 @@ footer p{
 		transition: 1s ease-out;
 	}
 
+	header{
+		height: 72px;
+	}
+
+	header .group-block .menu {
+		margin-left: 10px;
+	}
+
 	header .group-block .menu div{
 		display: flex;
+		align-items: center;
 		position: relative;
 	}
 
@@ -876,11 +884,85 @@ footer p{
 		position: absolute;
 	}
 
+	header .panel-navigation > div{
+		width: calc(53px - 33%);
+		/*margin-bottom: 15px;*/
+	}
+
+	header .panel-navigation div img{
+		width: 83%;
+	}
+
 	header .panel-navigation > div:nth-child(-n+2) {
 		display: none;
 	}
 
+	header .panel-navigation div.notification {
+		top: 5px;
+		right: 40px;
+	}
+
 	main .partners .sort ul {
 		flex-direction: column;
+	}
+
+	main .full-path {
+		padding-top: 25px;
+	}
+	main .block-content .main-content h1 {
+		font-size: 28px;
+		padding: 23px 0;
+	}
+
+	main .block-content .main-content p {
+		font-size: 18px;
+		line-height: 1.4em;
+	}
+
+	.wrap {
+		margin: 0;
+	}
+
+	#slider, .wrap, .slide-content {
+		width: auto;
+	}
+
+	.slide-content {
+		padding: 24px 20px;
+	}
+
+	.slide-content a {
+		font-size: 17px;
+	}
+
+	.slide-content p {
+		font-size: 14px;
+	}
+
+	.arrow{
+		display: none;
+	}
+
+	main .seo-info {
+		margin-top: 48px;
+	}
+
+	main .partners h2 {
+		font-size: 24px;
+		padding-bottom: 18px;
+	}
+
+	main .partners .list-partners .partner .icon {
+		width: 40px;
+		height: 40px;
+		background-size: cover;
+	}
+
+	main .popular-courses h2 {
+		font-size: 24px;
+	}
+
+	footer .simple-block {
+		display: none;
 	}
 }
