@@ -5,10 +5,11 @@ let tabContent = document.getElementsByClassName('tabContent'),
 	hamburger = document.querySelector('.hamburger');
 	arrowLeft = document.getElementById("arrow-left"),
 	arrowRight = document.getElementById("arrow-right"),
-	speedScroll = 15,
+	speedScroll = 99,
 	icon = document.getElementsByClassName('icon'),
 	expert = document.getElementsByClassName('expert'),
 	partner = document.getElementsByClassName('partner'),
+	slider,
 	current = 0;
 
 
@@ -68,7 +69,9 @@ pagination();
 
 
 //начало slider
-function reset(){
+function slider(){
+
+	function reset(){
 	for (let i = 0; i < sliderImages.length; i++) {
 		sliderImages[i].style.display = "none";
 		sliderImages[i].parentElement.parentElement.children[2].children[i].children[0].style.display = "none";
@@ -109,6 +112,17 @@ arrowRight.onclick = function(){
 	slideRight();
 };
 startSlide();
+}
+
+function chooseScreen(){
+	if(window.outerWidth < 320){
+		slider = Peppermint(document.getElementById('slider'));
+	}else{
+		slider();
+	}
+}
+chooseScreen();
+
 //конец slider
 
 
@@ -119,7 +133,7 @@ document.getElementsByClassName('anchorUp')[0].onclick = function(){
 
 function scrollBar(y){
 	let stop;
-	if(window.pageYOffset == 0){
+	if(window.pageYOffset === 0){
 		cancelAnimationFrame(stop);
 	}
 	
