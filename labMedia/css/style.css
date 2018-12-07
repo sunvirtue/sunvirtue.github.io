@@ -953,6 +953,10 @@ footer p{
 		display: none;
 	}
 
+	.state-slide{
+		display: none;
+	}
+
 	main .seo-info {
 		margin-top: 48px;
 	}
