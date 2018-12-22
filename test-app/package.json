@@ -1,0 +1,190 @@
+[
+	{
+		"id": 0,
+		"name": "Динго",
+		"lengthKnife": "246mm",
+		"image": "https://www.splav.ru/img/g20141209111534857211t3n1.jpg",
+		"description": "Универсальный туристический нож",
+		"price": 1760,
+	},
+
+	{
+		"id": 1,
+		"name": "Финский",
+		"lengthKnife": "260mm",
+		"image": "https://www.splav.ru/img/g20141209111543419711t3n1.jpg",
+		"description": "Реплика классического финского пуукко с клинком-ромбиком и рукоятью с «грибком»",
+		"price": 3550,
+	},
+
+	{
+		"id": 2,
+		"name": "Шершень",
+		"lengthKnife": "250mm",
+		"image": "https://www.splav.ru/img/g20141209111546169711t3n1.jpg",
+		"description": "Туристический нож",
+		"price": 2720,
+	},
+
+	{
+		"id": 3,
+		"name": "Барс",
+		"lengthKnife": "270mm",
+		"image": "https://www.splav.ru/img/g20121210163135823770t3n1.jpg",
+		"description": "Универсальный кованный туристический нож",
+		"price": 2990,
+	},
+
+	{
+		"id": 4,
+		"name": "Клён",
+		"lengthKnife": "265mm",
+		"image": "https://www.splav.ru/img/g20090723155208504247t3n1.jpg",
+		"description": "Шкуросъемный нож",
+		"price": 2990,
+	},
+
+	{
+		"id": 5,
+		"name": "Коготь",
+		"lengthKnife": "190mm",
+		"image": "https://www.splav.ru/img/g20161216132237944235t3n1.jpg",
+		"description": "Небольшой <<шейный нож>> (Neck-knife) для ежедневного ношения",
+		"price": 1650,
+	},
+
+	{
+		"id": 6,
+		"name": "Москит",
+		"lengthKnife": "90mm",
+		"image": "https://www.splav.ru/img/g20161216132239053610t3n1.jpg",
+		"description": "Небольшой нож для городского ношения (горфикс) с горизонтальными ножнами",
+		"price": 1650,
+	},
+
+	{
+		"id": 7,
+		"name": "Вепрь",
+		"lengthKnife": "270mm",
+		"image": "https://www.splav.ru/img/g20120224173022441405t3n1.jpg",
+		"description": "Универсальный туристический нож",
+		"price": 2200,
+	},
+
+	{
+		"id": 8,
+		"name": "Кайман",
+		"lengthKnife": "230mm",
+		"image": "https://www.splav.ru/img/g20120224173025894530t3n1.jpg",
+		"description": "Универсальный нож туриста",
+		"price": 2150,
+	},
+
+	{
+		"id": 9,
+		"name": "Финский",
+		"lengthKnife": "245mm",
+		"image": "https://www.splav.ru/img/g20121228124746218123t3n1.jpg",
+		"description": "Туристический нож «Универсальной серии»",
+		"price": 2090,
+	},
+
+	{
+		"id": 10,
+		"name": "Мачете МТ-23",
+		"lengthKnife": "460mm",
+		"image": "https://www.splav.ru/img/g20131216161431138770t3n1.jpg",
+		"description": "Большое походное мачете, оптимизированное под рубку",
+		"price": 3840,
+	},
+
+	{
+		"id": 11,
+		"name": "МТ-104",
+		"lengthKnife": "265mm",
+		"image": "https://www.splav.ru/img/g20150625172119600951t3n1.jpg",
+		"description": "Универсальный походный нож",
+		"price": 3910,
+	},
+
+	{
+		"id": 12,
+		"name": "МТ-107(Финка НКВД)",
+		"lengthKnife": "249mm",
+		"image": "https://www.splav.ru/img/g20151128181214555985t3n1.jpg",
+		"description": "Реплика исторического ножа, который был в ходу у подразделений НКВД в годы Великой Отечественной Войны",
+		"price": 3180,
+	},
+
+	{
+		"id": 13,
+		"name": "Кабан",
+		"lengthKnife": "266mm",
+		"image": "https://www.splav.ru/img/g20151230111746535344t3n1.jpg",
+		"description": "Универсальный туристический нож",
+		"price": 1470,
+	},
+
+	{
+		"id": 14,
+		"name": "Акела",
+		"lengthKnife": "213mm",
+		"image": "https://www.splav.ru/img/g20170502172944558453t3n1.jpg",
+		"description": "Складной нож для ежедневного ношения (EDC)",
+		"price": 1450,
+	},
+
+	{
+		"id": 15,
+		"name": "Нож складной ВДВ",
+		"lengthKnife": "195mm",
+		"image": "https://www.splav.ru/img/g20171101164913853254t3n1.jpg",
+		"description": "Складной нож для ежедневного ношения",
+		"price": 1400,
+	},
+
+	{
+		"id": 16,
+		"name": "Вятич-М2",
+		"lengthKnife": "247mm",
+		"image": "https://www.splav.ru/img/g20170927133902070563t3n1.jpg",
+		"description": "Скелетный нож для спортивного метания",
+		"price": 850,
+	},
+
+	{
+		"id": 17,
+		"name": "Кайман",
+		"lengthKnife": "278mm",
+		"image": "https://www.splav.ru/img/g20150724150850446400t3n1.jpg",
+		"description": "Гражданская версия боевого ножа - Кайман (раннее название - Витязь)",
+		"price": 2170,
+	},
+
+	{
+		"id": 18,
+		"name": "Валет",
+		"lengthKnife": "216mm",
+		"image": "https://www.splav.ru/img/g20121218140644867243t3n1.jpg",
+		"description": "Двусторонний нож для спортивного метания. Во избежании травматизма клинки не заточены",
+		"price": 2020,
+	},
+
+	{
+		"id": 19,
+		"name": "Кобра",
+		"lengthKnife": "310mm",
+		"image": "https://www.splav.ru/img/g20150325092749043607t3n1.jpg",
+		"description": "Просто огонь!",
+		"price": 3300,
+	},
+
+	{
+		"id": 20,
+		"name": "Тайфун",
+		"lengthKnife": "287mm",
+		"image": "https://www.splav.ru/img/g20141215170636465420t3n1.jpg",
+		"description": "Нож, позиционируемый производителем в качестве ножа для выживания",
+		"price": 3180,
+	},
+];
