@@ -1,0 +1,181 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+html, body{
+	background: green;
+}
+@font-face {
+	font-family: "OpenSans";
+	src: url('../fonts/openSans.ttf');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: "Roboto-boldCondensed";
+	src: url('../fonts/roboto-boldCondensed.ttf');
+	font-weight: 700;
+	font-style: normal;
+}
+@font-face {
+	font-family: "MyriadPro";
+	src: url('../fonts/myriadPro-regular.otf');
+}
+@font-face {
+	font-family: "Gotham-medium";
+	src: url('../fonts/gotham-medium.otf');
+}
+@font-face {
+	font-family: "Gotham-bold";
+	src: url('../fonts/gotham-bold.otf');
+	font-weight: 700;
+	font-style: normal;
+}
+@font-face {
+	font-family: "Gotham-book";
+	src: url('../fonts/gotham-book.otf');
+	font-weight: normal;
+	font-style: normal;
+}
+
+h1, h2, h3, h4, h5, h6{
+	font-family: "Roboto", arial, sans;
+	text-transform: uppercase;
+	font-weight: normal;
+}
+a:link, a:visited{
+	text-decoration: none;
+	list-style-type: none;
+}
+a:active, a:hover{
+	text-decoration: none;
+	text-decoration-color: #11749e;
+	list-style-type: none;
+
+}
+
+.container-fluid{
+	width: 100vw;
+	height: 100vh;
+	background-image: url('../img/back-header.png');
+	background-position: 50% 0%;
+	background-repeat: no-repeat;
+	background-size: cover;
+
+}
+.container{
+	max-width: 1200px;
+	margin: 0 auto;
+}
+.header{
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	/*justify-content: space-between;*/
+	padding: 30px 15px;
+	box-sizing: border-box;
+}
+.logo{
+	
+}
+.header-menu{
+	padding-left: 243px;
+}
+.back-logo{
+	width: 67px;
+	height: 67px;
+	background-color: rgb( 255, 255, 255 );
+	opacity: 0.749;
+}
+.back-logo .front-logo{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 67px;
+	height: 67px;
+	background-color: rgb( 17, 116, 158 );
+	transform: translate(-12px, -8px);
+	font-size: 23px;
+	font-family: "OpenSans";
+	color: rgb( 245, 245, 245 );
+	font-weight: bold;
+}
+.header-menu-nav{
+	display: flex;
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+.menu-item{
+	margin-bottom: 2px;
+}
+
+.menu-item a:hover{
+	border-bottom: 2px solid rgb( 17, 116, 158 );
+	margin-bottom: -2px;
+	padding-bottom: 40px;
+}
+
+.menu-item a{
+	text-decoration: none;
+	padding: 0 15px;
+	font-size: 16px;
+	font-family: "MyriadPro";
+	color: rgb( 255, 255, 255 );
+	text-align: center;
+}
+
+.icons{
+	display: flex;
+	margin-left: 15px;
+}
+
+.icon{
+	width: 24px;
+	height: 24px;
+	margin-left: 24px;
+}
+.box-align{
+	height: calc(100vh - 190px);
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.name-layout{
+	font-size: 110px;
+	font-family: "Gotham-bold";
+	color: rgb( 245, 245, 245 );
+	text-align: center;
+}
+.helper{
+	font-size: 18px;
+	font-family: "Gotham-medium";
+	color: rgb( 17, 116, 158 );
+	line-height: 2.065;
+	letter-spacing: 20px;
+	text-align: center;
+}
+.box-scroll{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.scroll-text{
+	font-size: 13px;
+	font-family: "OpenSans";
+	color: rgb( 255, 255, 255 );
+	text-shadow: 0 0 1px rgba(0, 0, 0, 1);
+	padding-bottom: 20px;
+}
+.scroll-button{
+	background-color: rgba(255, 255, 255, 0);
+	background-image: url('../img/arrow.png');
+	background-repeat: no-repeat;
+	background-position: center;
+	width: 67px;
+	height: 67px;
+	outline: white;
+	border-radius: 50px;
+}
