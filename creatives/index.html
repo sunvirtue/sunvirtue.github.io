@@ -5,9 +5,34 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Creatives</title>
 	<link rel="stylesheet" href="css/style.css">
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCj0dzOKBbcXw1NPO6XAH3d4qEB5azUSZY"></script>
+    
+        
+        <script type="text/javascript">
+            google.maps.event.addDomListener(window, 'load', init);
+        
+            function init() {
+                var mapOptions = {
+                    zoom: 11,
+
+                    center: new google.maps.LatLng(40.6700, -73.9400), // New York
+
+                    styles: [{"stylers":[{"hue":"#ff1a00"},{"invert_lightness":true},{"saturation":-100},{"lightness":33},{"gamma":0.5}]},{"featureType":"water","elementType":"geometry","stylers":[{"color":"#2D333C"}]}]
+                };
+
+                var mapElement = document.getElementById('map');
+
+                var map = new google.maps.Map(mapElement, mapOptions);
+
+                var marker = new google.maps.Marker({
+                    position: new google.maps.LatLng(50.6700, -33.9400),
+                    map: map
+                });
+            }
+        </script>
 </head>
 <body>
-	<div class="container-fluid">
+	<div class="container-fluid bg">
 		<header class="container">
 			<div class="header">
 				<div class="logo">
@@ -41,20 +66,208 @@
 					
 				<div class="box-scroll">
 					<p class='scroll-text'>Scroll Down</p>
-					<input type="button" class='scroll-button'>
+					<input type="button" class='template-bg scroll-button-icon'>
 				</div>
 			</div>
-
-			
 		</header>
 	</div>
+
+	<div class="about-agency">
+		<div class="container">
+			<div class="bg-symbol">W
+				<h2 class="heading-txt">
+					We Are An Awesome Agency 
+				</h2>
+			</div>
+			<div class="advantages-agency">
+				<div class="advantage-item">
+					<div class="icon-item"><img src="img/edit.png" alt="edit"></div>
+					<h4 class="head-tag-agency">feature one</h4>
+					<p class="description-item">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad expedita porro voluptatibus cupiditate minus.</p>
+				</div>
+
+				<div class="advantage-item">
+					<div class="icon-item"><img src="img/edit.png" alt="edit"></div>
+					<h4 class="head-tag-agency">feature one</h4>
+					<p class="description-item">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad expedita porro voluptatibus cupiditate minus.</p>
+				</div>
+
+				<div class="advantage-item">
+					<div class="icon-item"><img src="img/edit.png" alt="edit"></div>
+					<h4 class="head-tag-agency">feature one</h4>
+					<p class="description-item">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad expedita porro voluptatibus cupiditate minus.</p>
+				</div>
+
+				<div class="advantage-item">
+					<div class="icon-item"><img src="img/edit.png" alt="edit"></div>
+					<h4 class="head-tag-agency">feature one</h4>
+					<p class="description-item">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad expedita porro voluptatibus cupiditate minus.</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="container-news">
+		<div class="container-second">
+			<div class="container-item-news container-item-align">
+				
+					<a href="#" class='date-pub'>Jan 4, 2016 | In Culture</a>
+					<h3 class='title-news'>AKITA INU DOG</h3>
+					<p class="description-news">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur molestiae temporibus quasi voluptatibus porro soluta exercitationem dignissimos fugit impedit vitae laborum aperiam ratione in dicta rerum, ullam, quod autem. <br><br>
+
+					Nisi porro recusandae nesciunt possimus neque quibusdam est, nemo debitis pariatur dignissimos aperiam, ipsa veniam, quasi dolores quos a dolorum placeat.</p>
+
+			</div>
+			<div class="image-news1 template-bg"></div>
+		</div>
+		<div class="container-second">
+			<div class="container-item-news container-item-align">
+				
+					<a href="#" class='date-pub'>Jan 4, 2016 | In Culture</a>
+					<h3 class='title-news'>AKITA INU DOG</h3>
+					<p class="description-news">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur molestiae temporibus quasi voluptatibus porro soluta exercitationem dignissimos fugit impedit vitae laborum aperiam ratione in dicta rerum, ullam, quod autem. <br><br>
+
+					Nisi porro recusandae nesciunt possimus neque quibusdam est, nemo debitis pariatur dignissimos aperiam, ipsa veniam, quasi dolores quos a dolorum placeat.</p>
+
+			</div>
+			<div class="image-news2 template-bg"></div>
+		</div>
+	</div>
+
+	<div class="bg-container">
+		<div class="container">
+			<div class="bg-symbol">B
+				<h2 class="heading-txt">
+					LET'S BLOG
+				</h2>
+			</div>
+			<p class="greeting-blog-text">We love clean design and advanced digital solutions.</p>
+			<div class="blog-container">
+				<div class="blog-container-item">
+					<div class="blog-photo photo-num1"></div>
+					<h4 class="blog-title-txt blog-title-align">Fresh Summer Campaign</h4>
+					<p class="blog-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae, sunt quibusdam assumenda facilis, itaque aspernatur debitis odit, est dolor vitae nam quis, quod magni architecto.</p>
+				</div>
+
+				<div class="blog-container-item">
+					<div class="blog-photo photo-num2"></div>
+					<h4 class="blog-title-txt blog-title-align">Fresh Summer Campaign</h4>
+					<p class="blog-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae, sunt quibusdam assumenda facilis, itaque aspernatur debitis odit, est dolor vitae nam quis, quod magni architecto.</p>
+				</div>
+
+				<div class="blog-container-item">
+					<div class="blog-photo photo-num3"></div>
+					<h4 class="blog-title-txt blog-title-align">Fresh Summer Campaign</h4>
+					<p class="blog-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae, sunt quibusdam assumenda facilis, itaque aspernatur debitis odit, est dolor vitae nam quis, quod magni architecto.</p>
+				</div>
+
+				<div class="blog-container-item">
+					<div class="blog-photo photo-num1"></div>
+					<h4 class="blog-title-txt blog-title-align">Fresh Summer Campaign</h4>
+					<p class="blog-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae, sunt quibusdam assumenda facilis, itaque aspernatur debitis odit, est dolor vitae nam quis, quod magni architecto.</p>
+				</div>
+			</div>
+		</div>
+	</div>
 	
+	<div class="quick-action">
+		<div class="container quick-align">
+			<div class="quick-container">
+				<img src="img/edit-img.png" class="quick-edit" alt="edit">
+				<p class="quick-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo at molestias provident perferendis explicabo deleniti, dicta molestiae laborum consequuntur dolorem excepturi amet vero consectetur obcaecati minus labore! At ea tenetur soluta, dolore laudantium, neque alias repellendus quisquam unde veritatis culpa.</p>
+			</div>
 
+			<div class="quick-container">
+				<img src="img/edit-img.png" class="quick-edit" alt="edit">
+				<p class="quick-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo at molestias provident perferendis explicabo deleniti, dicta molestiae laborum consequuntur dolorem excepturi amet vero consectetur obcaecati minus labore! At ea tenetur soluta, dolore laudantium, neque alias repellendus quisquam unde veritatis culpa.</p>
+			</div>
+		</div>
+	</div>
+	<div class="key-feature">
+		<div class="container">
+			<div class="key-feature-container">
+				<div class="feature-text">
+					<h3 class='title-news'>AKITA INU DOG</h3>
+					<p class="description-news">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur molestiae temporibus quasi voluptatibus porro soluta exercitationem dignissimos fugit impedit vitae laborum aperiam ratione in dicta rerum, ullam, quod autem.</p>
+					<div class="block-links">
+						<a href="#" class='feature-link'>Fully Responsive Design</a>
+						<a href="#" class='feature-link'>High Quality Code</a>
+						<a href="#" class='feature-link'>Different Headers & Layout</a>
+					</div>
+				</div>
 	
+				<img src="img/device.png" alt="device" class='device'>
+			</div>
+		</div>
+	</div>
+	
+	<div class="bg-container">
+		<div class="container">
+			<div class="bg-symbol">T
+				<h2 class="heading-txt">
+					OUR TEAM
+				</h2>
+			</div>
+			<p class="greeting-blog-text">sales long tail influencer pitch release niche market.</p>
+			<div class="blog-container">
+				<div class="blog-container-item team-item position-img-1">
+					<div class="member-info">
+						<h4 class="blog-title-txt">Jonh Snow</h4>
+						<p class="position">СЕО</p>
+					</div>
+				</div>
+				<div class="blog-container-item team-item position-img-2">
+					<div class="member-info">
+						<h4 class="blog-title-txt">Jonh Snow</h4>
+						<p class="position">СЕО</p>
+					</div>
+				</div>
+				<div class="blog-container-item team-item position-img-3">
+					<div class="member-info">
+						<h4 class="blog-title-txt">Jonh Snow</h4>
+						<p class="position">СЕО</p>
+					</div>
+				</div>
+				<div class="blog-container-item team-item position-img-4">
+					<div class="member-info">
+						<h4 class="blog-title-txt">Jonh Snow</h4>
+						<p class="position">СЕО</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 
+	<div class="contact-area">
+		<div class="container">
+			<div class="bg-symbol">C
+				<h2 class="heading-txt">
+					 We’d love to hear about your project. 
+				</h2>
+			</div>
+			<div class="contact-form">
+				<div class="blog-container boxsizing">
+					<input type="text" placeholder="Name" class="good-form min-good-form" id='name' required>
+					<input type="email" placeholder="Email" class="good-form min-good-form" id='email' required>
+					<input type="text" placeholder="Phone" class="good-form min-good-form" id='email' required>
+				</div>
+				<textarea placeholder="Message" class="good-form max-good-form" id='msg'></textarea>
+				<input type="submit" class='submitter' value="Отправить">
+			</div>
+		</div>
+	</div>
 
+	<div class="map-ggl">
+			<div id='map' class="mapa" frameborder="0" style="border:0" allowfullscreen></div>
+	</div>
 
-
+	<footer class="container">
+		<div class="blog-container">
+			<p class="all-right">© 2019 PSDfreebies.com – All Right Reserved</p>
+			<p class="all-right">sunvirtue</p>
+		</div>
+		
+	</footer>
 
 
 

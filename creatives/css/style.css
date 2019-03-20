@@ -3,7 +3,7 @@
 	padding: 0;
 }
 html, body{
-	background: green;
+	background: black;
 }
 @font-face {
 	font-family: "OpenSans";
@@ -43,6 +43,9 @@ h1, h2, h3, h4, h5, h6{
 	text-transform: uppercase;
 	font-weight: normal;
 }
+a{
+	color: white;
+}
 a:link, a:visited{
 	text-decoration: none;
 	list-style-type: none;
@@ -55,15 +58,17 @@ a:active, a:hover{
 }
 
 .container-fluid{
-	width: 100vw;
+	/*width: 100vw;*/
 	height: 100vh;
+}
+.bg{
 	background-image: url('../img/back-header.png');
 	background-position: 50% 0%;
 	background-repeat: no-repeat;
 	background-size: cover;
-
 }
 .container{
+	/*	width: 100%;*/
 	max-width: 1200px;
 	margin: 0 auto;
 }
@@ -71,7 +76,7 @@ a:active, a:hover{
 	display: flex;
 	flex-direction: row;
 	align-items: center;
-	/*justify-content: space-between;*/
+	justify-content: space-between;
 	padding: 30px 15px;
 	box-sizing: border-box;
 }
@@ -79,7 +84,7 @@ a:active, a:hover{
 	
 }
 .header-menu{
-	padding-left: 243px;
+	/*padding-left: 243px;*/
 }
 .back-logo{
 	width: 67px;
@@ -169,13 +174,366 @@ a:active, a:hover{
 	text-shadow: 0 0 1px rgba(0, 0, 0, 1);
 	padding-bottom: 20px;
 }
-.scroll-button{
-	background-color: rgba(255, 255, 255, 0);
-	background-image: url('../img/arrow.png');
+.template-bg{
 	background-repeat: no-repeat;
 	background-position: center;
+}
+.scroll-button-icon{
+	background-color: rgba(255, 255, 255, 0);
+	background-image: url('../img/arrow.png');
 	width: 67px;
 	height: 67px;
 	outline: white;
 	border-radius: 50px;
+}
+
+.about-agency{
+	background-color: rgb( 17, 116, 158 );
+	/*height: calc(100vh - 42px);*/
+}
+.bg-symbol{
+	position: relative;
+	font-size: 180px;
+	font-family: "Roboto-boldCondensed";
+	color: rgba( 255, 255, 255, 0.2 );
+	line-height: 0.852;
+	text-align: center;
+	padding-top: 90px;
+}
+
+.heading-txt{
+	position: absolute;
+	font-size: 28px;
+	font-family: "Gotham-book";
+	color: rgb( 255, 255, 255 );
+	line-height: 1.2;
+	text-align: center;
+	z-index: 175;
+	padding-top: 90px;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.advantages-agency{
+	position: relative;
+	margin-top: 70px;
+	display: flex;
+	justify-content: space-around;
+	box-sizing: border-box;
+}
+.advantage-item{
+	width: 270px;
+}
+.icon-item{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 133px;
+	height: 133px;
+	border-radius: 50%;
+	background-color: rgb( 46, 133, 170 );
+	margin: 0 auto;
+}
+.head-tag-agency{
+	font-size: 14px;
+	font-family: "Gotham-medium";
+	color: rgb( 255, 255, 255 );
+	text-transform: uppercase;
+	line-height: 2;
+	text-align: center;
+	padding: 25px 0 30px 0;
+}
+.description-item{
+	font-size: 12px;
+	font-family: "Gotham-book";
+	color: rgb( 255, 255, 255 );
+	line-height: 1.6;
+	text-align: center;
+	padding-bottom: 130px;
+}
+.container-second{
+	display: flex;
+	background-color: rgb( 34, 34, 34 );
+	box-sizing: border-box;
+	color: white;
+}
+.container-second:nth-child(2n){
+	display: flex;
+	flex-direction: row-reverse;
+	background-color: rgb( 243, 243, 243 );
+	color: black;
+}
+.container-second:nth-child(2n) .date-pub{
+	color: black;
+}
+.container-item-news{
+	width: 50%;
+}
+.container-item-align{
+	width: 470px;
+	padding: 80px 0;
+	margin: 0 auto;
+}
+.date-pub{
+	text-decoration: none;
+	font-size: 13px;
+	font-family: "Gotham-book";
+	text-align: left;
+}
+
+.title-news{
+	padding: 10px 0 40px 0;
+	letter-spacing: 4px;
+	font-size: 18px;
+	font-family: "Gotham-medium";
+	text-transform: uppercase;
+	line-height: 1.44;
+	text-align: left;
+}
+.description-news{
+	font-size: 13px;
+	font-family: "Gotham-book";
+	line-height: 1.6;
+	text-align: left;
+}
+.image-news1{
+	background-image: url('../img/news-bg1.png');
+	background-size: cover;
+	width: 50%;
+	height: 488px;
+}
+.image-news2{
+	background-image: url('../img/news-bg2.png');
+	background-size: cover;
+	width: 50%;
+	height: 533px;
+}
+.bg-container{
+	background-color: white;
+}
+.bg-container .bg-symbol{
+	color: rgba( 34, 34, 34, 0.2 );
+}
+.bg-container .heading-txt{
+	color: black;
+}
+.greeting-blog-text{
+	font-size: 24px;
+	font-family: "Gotham-medium";
+	color: rgb( 34, 34, 34 );
+	line-height: 1.231;
+	text-align: center;
+	padding: 20px;
+}
+.blog-container{
+	display: flex;
+	justify-content: space-between;
+
+}
+.blog-container-item{
+	margin: 55px 0 80px 0;
+	/*border: 1px solid;*/
+	width: 270px;
+}
+.blog-photo{
+	background-repeat: no-repeat;
+	background-position: center;
+	height: 270px;
+}
+.photo-num1{
+	background-image: url('../img/blog-img1.png');
+}
+.photo-num2{
+	background-image: url('../img/blog-img2.png');
+}
+.photo-num3{
+	background-image: url('../img/blog-img3.png');
+}
+.blog-title-txt{
+	font-size: 13px;
+	font-family: "Gotham-medium";
+	color: rgb( 17, 116, 158 );
+	text-transform: uppercase;
+	line-height: 2;
+	text-align: center;
+}
+.blog-title-align{
+	padding: 35px 0 25px 0;
+}
+.position{
+	text-align: center;
+	font-size: 12px;
+	font-family: "Gotham-bold";
+	color: rgb( 0, 0, 0 );
+	text-transform: uppercase;
+}
+.blog-description{
+	font-size: 13px;
+	font-family: "Gotham-book";
+	color: rgb( 34, 34, 34 );
+	line-height: 1.6;
+	text-align: center;
+}
+
+.quick-action{
+	background-color: rgb( 17, 116, 158 );
+
+}
+.quick-align{
+	display: flex;
+	padding: 110px 0 150px 0;
+}
+.quick-container{
+	display: flex;
+	width: 570px;
+	justify-content: space-between;
+}
+.quick-edit{
+	width: 69px;
+	height: 69px;
+}
+.quick-text{
+	padding: 0 30px;
+	font-size: 13px;
+	font-family: "Gotham-book";
+	color: rgb( 255, 255, 255 );
+	line-height: 1.6;
+	text-align: left;
+}
+.key-feature{
+	background-image: url('../img/feature-bg.jpg');
+	background-repeat: no-repeat;
+	background-position: center;
+	padding: 100px 0;
+}
+.key-feature-container{
+	display: flex;
+}
+.feature-text{
+	color: white;
+	width: 500px;
+	padding: 110px 0;
+}
+.device{
+	margin: 0 auto;
+}
+.block-links{
+	padding-top: 60px;
+}
+.feature-link{
+	display: block;
+	text-transform: uppercase;
+	font-size: 13px;
+	font-family: 'Gotham-medium';
+	background-color: rgb( 17, 116, 158 );
+	padding: 12px 0 12px 19px;
+	box-sizing: border-box;
+	margin-bottom: 25px;
+	/*width: 370px;*/
+}
+.feature-text .feature-link:nth-child(1n){
+	width: 430px;
+}
+.feature-text .feature-link:nth-child(2n){
+	width: 400px;
+}
+.feature-text .feature-link:nth-child(3n){
+	width: 370px;
+}
+.team-container{
+	background-color: white;
+}
+.team-item{
+	position: relative;
+	width: 270px;
+	height: 365px;
+	background-repeat: no-repeat;
+	background-position: 50% 0;
+}
+.position-img-1{
+	background-image: url('../img/worker1.jpg');
+}
+.position-img-2{
+	background-image: url('../img/worker2.jpg');
+}
+.position-img-3{
+	background-image: url('../img/worker3.jpg');
+}
+.position-img-4{
+	background-image: url('../img/worker4.jpg');
+}
+.member-info{
+	position: absolute;
+	bottom: -50px;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	background-color: white;
+	width: 100%;
+	max-width: 215px;
+	padding-top: 20px;
+}
+.contact-area{
+	background-image: url('../img/contact-bg.jpg');
+	background-repeat: no-repeat;
+	background-position: center;
+	padding-bottom: 100px;
+}
+
+.boxsizing{
+	box-sizing: border-box;
+	flex-wrap: wrap;
+	padding-top: 50px;
+}
+.good-form{
+	border: 1px solid #fff;
+	background-color: rgba(255, 255, 255, 0);
+	font-size: 13px;
+	font-family: "Gotham-book";
+	color: rgb( 255, 255, 255 );
+}
+.min-good-form{
+	width: 350px;
+	padding: 20px 0 20px 20px;
+	margin-bottom: 40px;
+}
+.good-form::-webkit-input-placeholder {color:#fff;}
+.good-form::-moz-placeholder          {color:#fff;}/* Firefox 19+ */
+.good-form:-moz-placeholder           {color:#fff;}/* Firefox 18- */
+.good-form:-ms-input-placeholder      {color:#fff;}
+
+.max-good-form{
+	resize: none;
+	/*width: 1160px;*/
+	/*max-width: 1160px;*/
+
+	height: 110px;
+	padding: 20px;
+	margin-bottom: 45px;
+}
+.submitter{
+	display: block;
+	font-size: 20px;
+	font-family: "Gotham-medium";
+	color: rgb( 255, 255, 255 );
+	text-transform: uppercase;
+	text-align: center;
+	width: 225px;
+	padding: 20px 0;
+	background-color: rgb( 17, 116, 158 );
+	border: none;
+	margin: 0 auto;
+}
+.mapa{
+	width: 100%;
+	height: 355px;
+	color: green;
+}
+
+.all-right{
+	font-size: 12px;
+	font-family: "Roboto-boldCondensed";
+	color: rgb( 255, 255, 255 );
+	line-height: 2.769;
+	padding: 50px 0;
 }
