@@ -1,0 +1,145 @@
+:root {
+	--alias: 'Алиас не может содержать русские буквы и пробелы';
+}
+*{
+	margin: 0;
+	padding: 0;
+	/*border: 1px solid;*/
+}
+.layer-max{
+	max-width: 1245px;
+	margin: 0 auto;
+}
+.workgroup-profile{
+
+}
+.workgroup-profile__descr{
+	position: relative;
+}
+.workgroup-profile__descr::before{
+	content: "";
+	position: absolute;
+	display: inline-block;
+	width: 17px;
+	height: 2px;
+	top: 8px;
+	left: -23px;
+	background: rgb(241, 153, 50);
+}
+.main-info{
+	position: relative;
+}
+.alert-block--show{
+	position: relative;
+	display: inline-block;
+	visibility: hidden;
+	font-size: 0;
+	transition: 300ms ease-in;
+}
+.alert-block--hide{
+	position: relative;
+	display: inline-block;
+	visibility: visible;
+	padding: 20px;
+	padding-left: 6.7%;
+	background: rgb(254, 249, 221);
+	font-size: 16px;
+	transition: 300ms ease-out;
+}
+.alert-block__box{
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+}
+.alert-block__box-icon-show{
+	width: 0;
+}
+.alert-block__box-icon-hide{
+	width: 24px;
+	margin-left: 20px;
+}
+.input{
+	display: flex;
+	width: 100%;
+	margin-bottom: 100px;
+	justify-content: space-around;
+}
+.input-item-1, .input-item-1--warn{
+	position: relative;
+	background: rgb(248, 247, 250);
+	max-width: 392px;
+	padding: 0 5px;
+	border-radius: 5px;
+	outline: none;
+}
+.input-item-1:hover{
+	background: rgb(241, 245, 249);
+}
+.input-item-1--warn{
+	border-radius: 5px;
+	border: 2px solid rgb(245, 188, 188);
+	margin: -2px;
+}
+.input-item-1--warn:after{
+	content: var(--alias);
+	position: absolute;
+	bottom: -18px;
+	left: -2px;
+	display: block;
+	width: calc(100% - 18px);
+	padding: 0 9px;
+	height: 17px;
+	background: rgb(245, 188, 188);
+	color: rgb(142, 27, 27);
+	border-radius: 0 0 5px 5px;
+	border-top: 0;
+	border-left: 2px;
+	border-right: 2px;
+	border-bottom: 2px;
+	border-style: solid;
+	border-color: rgb(245, 188, 188);
+}
+/*НАЧАЛО правильный фокус*/
+.input-item-1:focus-within{
+	position: relative;
+	background: #fff;
+	border: 2px solid rgb(99, 160, 241);
+	border-radius: 5px;
+	margin: -2px;
+	transition: 0.3s;
+}
+/*КОНЕЦ правильный фокус*/
+/*НАЧАЛО ошибочный фокус*/
+.input-item-1--warn:focus-within{
+	border: 2px solid rgb(245, 188, 188);
+}
+/*КОНЕЦ ошибочный фокус*/
+.input-item-1:focus-within > label{
+	color: rgb(99, 160, 241);
+}
+.input-item-1--warn:focus-within > label, .input-item-1--warn > label{
+	color: rgb(245, 188, 188);
+}
+/*.input-item-1--warn:focus-within > label{
+	color: red;
+}*/
+.input-item-1__pointer{
+	margin: 0 5px;
+	font-size: 14px;
+	cursor: pointer;
+}
+.input-item-1__pointer-changed{
+	color: rgb(186, 185, 187);
+	margin: 0 5px;
+}
+.input-item-1__group{
+	margin: 0 5px;
+	outline: none;
+	border: none;
+	background-color: rgba(255, 255, 255, 0);
+}
+.send-alert{
+	position: fixed;
+	left: 50px;
+	bottom: 50px;
+}

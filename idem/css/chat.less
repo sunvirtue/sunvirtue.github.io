@@ -1,0 +1,126 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+.chat{
+
+	max-width: 651px;
+	height: 757px;
+	background: url("../img/chat.png");
+	margin: 0 auto;
+	margin-bottom: 50px;
+	font-family: "Roboto";
+	font-style: normal;
+	font-weight: normal;
+	font-size: 14px;
+	line-height: 24px;
+}
+.read-message{
+	overflow-y: scroll;
+	max-height: 517px;
+	width: 100%;
+	border-bottom: 1px solid #DBDBDB;
+	&__box{
+		display: flex;
+
+
+		&_avatar{
+			min-width: 47px;
+			height: 47px;
+			margin: 20px 18px;
+			background: url("../img/kun.png") no-repeat;
+		}
+
+		&_text, &_text2{
+			position: relative;
+			margin-top: 20px;
+			padding: 15px 15px 7px 15px;
+			width: calc(470px - 30px);
+			background: #f1f3f5;
+			border-radius: 5px;
+
+			&:before{
+				content: '';
+				position: absolute;
+				width: 0px;
+      			height: 0px;
+      			border-right: 10px solid rgba(241, 243, 245, 0);
+      			border-top: 10px solid rgba(241, 243, 245, 0);
+      			border-left: 10px solid rgba(241, 243, 245, 0);
+      			border-bottom: 10px solid rgba(241, 243, 245, 1);
+			}
+		}
+		&_text{
+			&:before{
+				top: 0;
+				left: -6px;
+      			transform: rotate(45deg);
+			}
+		}
+			
+		&_text2{
+			&:before{
+				top: 0;
+				right: -6px;
+      			transform: rotate(-45deg);
+			}
+		}
+
+		
+	}
+	&__date{
+			position: relative;
+			text-align: center;
+			transform: translate(0, 50%);
+
+			&:before, &:after{
+				content: '';
+				margin-top: 10px;
+				width: 35%;
+				height: 0px;
+				border-top: 1px solid #dbdbdb;
+				position: absolute;
+				top: 0;
+				
+			}
+			&:before{
+				left: 0;
+			}
+			&:after{
+				right: 0;
+			}
+	}
+}
+.write-message{
+	&__input{
+		max-width: 590px;
+		width: calc(100% - 60px);
+		height: calc(129px - 20px);
+		margin: 20px 20px 0 20px;
+		padding: 10px;
+		resize: none;
+		border-radius: 4px;
+
+		font-family: "Noto Sans";
+		font-style: normal;
+		font-weight: normal;
+		font-size: 14px;
+		line-height: 19px;
+	}
+	&__send{
+		padding: 10px 22px;
+		background: #0f54b9;
+		box-shadow: 0px 4px 6px rgba(15, 84, 185, 0.3);
+		border-radius: 21px;
+		border: 0;
+		margin: 10px 20px 0 20px;
+
+		font-family: "Proxima Nova";
+		font-size: 16px;
+		line-height: 24px;
+		color: #ffffff;
+	}
+}
+.reverse{
+	flex-direction: row-reverse;
+}

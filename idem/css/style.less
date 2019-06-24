@@ -1,0 +1,258 @@
+@bg__sections: #c4c4c4;
+@bg__block1-main: #a2a9b7;
+@bg__block1-extra: #e3ebd3;
+@bg__block2-main: #e8ebed;
+@bg__block2-extra: #ffaa87;
+@bg__block2-extra2: #f55e62;
+@bg__block2-extra3: #c7abd4;
+@color__text-v1: #ffffff;
+
+*{
+  margin: 0;
+  padding: 0;
+}
+
+.header, .footer{
+  height: 90px;
+  background: @bg__sections;
+  font-size: 24px;
+  line-height: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.header, .footer, .container{
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: normal;
+}
+.container{
+  display: flex;
+  flex-direction: column;
+  padding: 0 12px 0 13px;
+  font-size: 14px;
+  line-height: 20px;
+  max-width: 768px;
+  margin: 0 auto;
+
+  &-block1{
+    display: flex;
+    height: 492px;
+    max-height: 492px;
+    margin: 10px 0;
+    
+    &:nth-child(1){
+      color: @color__text-v1;
+    }
+    
+    &__first{
+      width: 74.6545%;
+      padding: 30px 46px 53px 25px;
+      font-size: 18.1121px;
+      line-height: 26px;
+    }
+    &:nth-child(1){
+       text-align: center;
+    }
+    
+    &__second{
+      width: calc(100% - 56.6545%);
+      
+      &_item1, &_item2{
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-end;
+        padding: 15px;
+        height: calc(50% - 35px);
+      }
+    }
+  }
+
+  &-block2{
+      display: flex;
+      width: 100%;
+    
+    &__first{
+      width: calc(56.6545% + 71px);
+      
+      &_item1, &_item2, &_item3{
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-end;
+        padding: 15px;
+        width: 50%;
+        height: 155px;
+      }
+      
+      &_item3{
+        width: calc(100% - 30px);
+      }
+    }
+    
+    
+    &__second{
+      display: flex;
+      flex-direction: column;
+      width: calc(100% - (56.6545% + 81px));
+      
+      &_item1, &_item2{
+        height: 155px;
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-end;
+        padding: 15px;
+        background: #90bce8;
+      }
+      &_item2{
+        background: #febf26;
+      }
+    }
+  }
+}
+
+.list-content{
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+  &-elem{
+    font-family: Noto Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 19px;
+    border-bottom: 1px dashed #000000; /* Необязателен. Здесь задается толщина, тип и цвет точек */
+    position: relative;
+    padding: 0;
+    margin-bottom:30px; /* Необязателен. Задается для установки расстояния между блоками li */
+    &__text, &__page{
+      bottom: -5px; /* Смещаем значимые блоки, чтобы они перекрыли точки */
+    }
+  &__text {
+    position :relative;
+    text-align-last: left;
+    margin-right:7em; /* Задается чтобы текст не заходил на номера страниц */
+    padding-right:10px; /* Необязателен. Задается чтобы точки не подходили вплотную к концу текста */
+    }
+    
+  &__page {
+    position: absolute;
+    right: 0;
+    padding-left:10px; /* Необязателен. Задается чтобы точки не подходили вплотную к номерам страниц */
+    }
+  }
+}
+.list-content span{
+  background-color: @bg__block1-extra; /* Это необходимо, чтобы перекрыть точки фоном */
+  margin: 0;
+}
+
+.group{
+  
+  &_elem1{
+    display: flex;
+  }
+  
+}
+
+.ml10{
+  margin-left: 10px; 
+}
+.mr10{
+  margin-right: 10px; 
+}
+
+.bg1{
+  background: @bg__block1-main;
+}
+.bg2{
+  background: @bg__block2-main;
+}
+.bg3{
+  background: @bg__block1-extra;
+  position: relative;
+  z-index: 1;
+  &_extra{
+    position: relative;
+    z-index: 0;
+    background: url(../img/image.png) no-repeat;
+    background-size: cover;
+    background-color: @bg__block1-extra;
+    &:hover{
+      -webkit-filter: blur(3px);
+      filter: blur(3px);
+    }
+  }
+}
+
+.bg4{
+  background: @bg__block2-extra;
+}
+.bg4-2{
+  background: @bg__block2-extra2;
+}
+.bg4-3{
+  background: @bg__block2-extra3;
+}
+
+.col-w{
+  color: @color__text-v1;
+}
+
+.mt10{
+  margin-top: 10px;
+}
+.reverse{
+  order: -1;
+}
+.obr-rvs{
+  display: flex;
+  flex-direction: column-reverse;
+}
+@media screen and (min-width : 240px) and (max-width : 767px) {
+  .container{
+    padding: 0;
+    &-block1{
+      margin-bottom: 0; 
+
+      &__first{
+        overflow-y: scroll;
+        padding: 15px 10px;
+      }
+
+      &:nth-child(1){
+        height: 50vh;
+      }
+
+      &:nth-child(3){
+        display: none;
+      }
+    }
+    &-block2{
+      margin-top: 10px;
+      display: block;
+
+      &:nth-child(2){
+        order: -1;
+      }
+
+      &__first{
+        width: 100%;
+        margin-left: 0;
+      }
+
+      &__second{
+        width: 100%;
+        margin-left: 0;
+        flex-direction: row;
+
+        &_item1, &_item2{
+          width: 50%;
+        }
+        &_item1{
+          margin-top: 10px;
+          margin-right: 10px;
+        }
+      }
+    }
+  }
+}

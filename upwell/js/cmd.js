@@ -30,7 +30,6 @@ function show_menu(nameVar, countElem, nameClassPrev, nameClassNew){
 		nameVar.children[countElem].classList.add(nameClassPrev);
 		nameVar.children[countElem].classList.remove(nameClassNew);
 	}
-	console.log(nameVar.children[countElem].classList);
 }
 
 //При необходимости можно удалить..

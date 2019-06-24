@@ -1,0 +1,233 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+.header,
+.footer {
+  height: 90px;
+  background: #c4c4c4;
+  font-size: 24px;
+  line-height: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.header,
+.footer,
+.container {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: normal;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  padding: 0 12px 0 13px;
+  font-size: 14px;
+  line-height: 20px;
+  max-width: 768px;
+  margin: 0 auto;
+}
+.container-block1 {
+  display: flex;
+  height: 492px;
+  max-height: 492px;
+  margin: 10px 0;
+}
+.container-block1:nth-child(1) {
+  color: #ffffff;
+}
+.container-block1__first {
+  width: 74.6545%;
+  padding: 30px 46px 53px 25px;
+  font-size: 18.1121px;
+  line-height: 26px;
+}
+.container-block1:nth-child(1) {
+  text-align: center;
+}
+.container-block1__second {
+  width: calc(100% - 56.6545%);
+}
+.container-block1__second_item1,
+.container-block1__second_item2 {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+  padding: 15px;
+  height: calc(50% - 35px);
+}
+.container-block2 {
+  display: flex;
+  width: 100%;
+}
+.container-block2__first {
+  width: calc(56.6545% + 71px);
+}
+.container-block2__first_item1,
+.container-block2__first_item2,
+.container-block2__first_item3 {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+  padding: 15px;
+  width: 50%;
+  height: 155px;
+}
+.container-block2__first_item3 {
+  width: calc(100% - 30px);
+}
+.container-block2__second {
+  display: flex;
+  flex-direction: column;
+  width: calc(100% - (56.6545% + 81px));
+}
+.container-block2__second_item1,
+.container-block2__second_item2 {
+  height: 155px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+  padding: 15px;
+  background: #90bce8;
+}
+.container-block2__second_item2 {
+  background: #febf26;
+}
+.list-content {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+.list-content-elem {
+  font-family: Noto Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 19px;
+  border-bottom: 1px dashed #000000;
+  /* Необязателен. Здесь задается толщина, тип и цвет точек */
+  position: relative;
+  padding: 0;
+  margin-bottom: 30px;
+  /* Необязателен. Задается для установки расстояния между блоками li */
+}
+.list-content-elem__text,
+.list-content-elem__page {
+  bottom: -5px;
+  /* Смещаем значимые блоки, чтобы они перекрыли точки */
+}
+.list-content-elem__text {
+  position: relative;
+  text-align-last: left;
+  margin-right: 7em;
+  /* Задается чтобы текст не заходил на номера страниц */
+  padding-right: 10px;
+  /* Необязателен. Задается чтобы точки не подходили вплотную к концу текста */
+}
+.list-content-elem__page {
+  position: absolute;
+  right: 0;
+  padding-left: 10px;
+  /* Необязателен. Задается чтобы точки не подходили вплотную к номерам страниц */
+}
+.list-content span {
+  background-color: #e3ebd3;
+  /* Это необходимо, чтобы перекрыть точки фоном */
+  margin: 0;
+}
+.group_elem1 {
+  display: flex;
+}
+.ml10 {
+  margin-left: 10px;
+}
+.mr10 {
+  margin-right: 10px;
+}
+.bg1 {
+  background: #a2a9b7;
+}
+.bg2 {
+  background: #e8ebed;
+}
+.bg3 {
+  background: #e3ebd3;
+  position: relative;
+  z-index: 1;
+}
+.bg3_extra {
+  position: relative;
+  z-index: 0;
+  background: url(../img/image.png) no-repeat;
+  background-size: cover;
+  background-color: #e3ebd3;
+}
+.bg3_extra:hover {
+  -webkit-filter: blur(3px);
+  filter: blur(3px);
+}
+.bg4 {
+  background: #ffaa87;
+}
+.bg4-2 {
+  background: #f55e62;
+}
+.bg4-3 {
+  background: #c7abd4;
+}
+.col-w {
+  color: #ffffff;
+}
+.mt10 {
+  margin-top: 10px;
+}
+.reverse {
+  order: -1;
+}
+.obr-rvs {
+  display: flex;
+  flex-direction: column-reverse;
+}
+@media screen and (min-width: 240px) and (max-width: 767px) {
+  .container {
+    padding: 0;
+  }
+  .container-block1 {
+    margin-bottom: 0;
+  }
+  .container-block1__first {
+    overflow-y: scroll;
+    padding: 15px 10px;
+  }
+  .container-block1:nth-child(1) {
+    height: 50vh;
+  }
+  .container-block1:nth-child(3) {
+    display: none;
+  }
+  .container-block2 {
+    margin-top: 10px;
+    display: block;
+  }
+  .container-block2:nth-child(2) {
+    order: -1;
+  }
+  .container-block2__first {
+    width: 100%;
+    margin-left: 0;
+  }
+  .container-block2__second {
+    width: 100%;
+    margin-left: 0;
+    flex-direction: row;
+  }
+  .container-block2__second_item1,
+  .container-block2__second_item2 {
+    width: 50%;
+  }
+  .container-block2__second_item1 {
+    margin-top: 10px;
+    margin-right: 10px;
+  }
+}
