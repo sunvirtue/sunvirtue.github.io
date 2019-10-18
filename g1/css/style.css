@@ -1,0 +1,108 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+.container{
+  display: flex;
+  justify-content: center;
+}
+.rightAnswers, .wrongAnswers{
+  width: 120px;
+  padding: 20px;
+  height: 20px;
+  background-color: #D2973D;
+  transition: 500ms ease-out;
+}
+@media screen and (min-width: 240px) and (max-width: 768px){
+  .container{
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+  .box{
+    display: flex;
+    justify-content: space-between;
+    width: 360px;
+  }
+  .field{
+    width: 100vw;
+    height: 100vh;
+  }
+  .rightAnswers, .wrongAnswers{
+    border: 1px solid black;
+  }
+}
+.rightAnswers_flash {
+  width: 120px;
+  padding: 20px;
+  height: 20px;
+  background-color: #00ff00;
+  transition: 200ms;
+  animation: expansion 500ms;
+}
+.wrongAnswers_flash {
+  width: 120px;
+  padding: 20px;
+  height: 20px;
+  background-color: #ff0000;
+  transition: 200ms;
+  animation: expansion 500ms;
+}
+.field{
+  width: 360px;
+  height: 360px;
+  background-color: #000;
+  display: flex;
+  justify-content: center;
+  pointer-events: none;
+  flex-wrap: wrap;
+}
+.itm{
+  border-radius: 10px;
+  transition: .2s linear;
+  pointer-events: auto;
+  display: flex;
+  width: 60px;
+  height: 60px;
+  background: #D2973D;
+  color: #fff;
+  padding: 5px;
+  margin: 5px;
+  justify-content: center;
+  align-items: center;
+  vertical-align: middle;
+  font-size: 24px;
+  cursor: pointer;
+  flex-basis: 50% 50% 50% 50%;
+}
+
+.itm:hover {
+  box-shadow: 0 0 0 0px #fff inset, 0 0 0 4px white inset;
+  border-radius: 50px;
+}
+.itm_hint{
+  width: 60px;
+  height: 60px;
+  background-color: blue;
+  transition: 200ms;
+}
+.itm_true{
+  width: 60px;
+  height: 60px;
+  background-color: green;
+  transform: scale(1.2);
+}
+.itm_false{
+  width: 60px;
+  height: 60px;
+  background-color: red;
+  padding: 5px;
+  margin: 5px;
+  transition: 200ms;
+  cursor: pointer;
+  transform: scale(1.2);
+}
+@keyframes expansion{
+  50% {
+    transform: scale(1.5);
+  }
+}
