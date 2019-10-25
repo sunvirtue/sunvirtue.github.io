@@ -122,6 +122,11 @@
 ::-moz-progress-bar {
     background: red;
 }
+.progress-box{
+  width: 120px;
+  height: 120px;
+  position: relative;
+}
 #progress{
   display: block;
   overflow: hidden;
@@ -132,7 +137,7 @@
     border-radius: 50%;
     width: 120px;
     height: 120px;
-  position: relative;
+/*   position: relative; */
 }
 #perc{
   position: absolute;
