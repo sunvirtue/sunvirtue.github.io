@@ -8,13 +8,17 @@
 </head>
 <body>
 	<div class="container">
-		<div class="box">
-		<div class="rightAnswers">Правильно: <span>0</span></div>
-		<div class="wrongAnswers">Не правильно: <span>0</span></div>
-		</div>
-		<div class="field"></div>
-	</div>
-	<div>Сколько будет: <p class="calcNum"></p></div>
+	  <div class="box">
+	    <div class="rightAnswers">Правильно: <span>0</span></div>
+	    <div class="wrongAnswers">Не правильно: <span>0</span></div>
+	  </div>
+    <div class="field"></div>
+	  <div class="box">
+	    <div>Сколько будет: <p class="calcNum"></p></div>
+	    <progress id="progress" value="0" max="60">Загружено <span id="percent">0</span>%</progress>
+	    <p id="perc"></p>
+	  </div>
+  </div>
 	<script src="js/game.js"></script>
 </body>
 </html>

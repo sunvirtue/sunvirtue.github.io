@@ -12,6 +12,7 @@
   height: 20px;
   background-color: #D2973D;
   transition: 500ms ease-out;
+  font-family: 'Bangers', cursive;
 }
 @media screen and (min-width: 240px) and (max-width: 768px){
   .container{
@@ -38,6 +39,7 @@
   background-color: #00ff00;
   transition: 200ms;
   animation: expansion 500ms;
+  font-family: 'Bangers', cursive;
 }
 .wrongAnswers_flash {
   width: 120px;
@@ -46,11 +48,12 @@
   background-color: #ff0000;
   transition: 200ms;
   animation: expansion 500ms;
+  font-family: 'Bangers', cursive;
 }
 .field{
   width: 360px;
   height: 360px;
-  background-color: #000;
+  background-color: #fff;
   display: flex;
   justify-content: center;
   pointer-events: none;
@@ -105,4 +108,35 @@
   50% {
     transform: scale(1.5);
   }
+}
+::-webkit-progress-bar {
+    background: #D2973D;
+}
+::-webkit-progress-value {
+    transition: all 250ms;
+    background: red;
+}
+::-moz-progress-bar {
+    background: red;
+}
+#progress{
+  display: block;
+  overflow: hidden;
+  transform: rotate(270deg);
+    color: #fff;
+    background: #D2973D;
+    border: 2px solid red;
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+  position: relative;
+}
+#perc{
+  position: absolute;
+  transform: translate(0, -65%);
+  color: #fff;
+  width: 120px;
+  height: 120px;
+  font-size: 32px;
+  text-align: center;
 }

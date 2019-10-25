@@ -5,6 +5,9 @@ let status;
 let rightAnswer = document.querySelector('.rightAnswers');
 let wrongAnswer = document.querySelector('.wrongAnswers');
 let trueValue;//верное значение
+let percnt = document.getElementById('perc');
+var progress = document.getElementById('progress'),
+    percent = document.getElementById('percent');
 //Рассчет числа
 function mainCalculate(a, b){
   let calc = document.querySelector('.calcNum');
@@ -105,3 +108,13 @@ function flashing(){
 function backToOrigCol(){
   rightAnswer.className = 'rightAnswers';
 }
+function changeProgress() {
+    if (progress.value >= progress.max) {
+        return;
+    }
+    percnt.textContent = progress.value;
+    progress.value++;
+    percent.textContent = Math.floor(progress.value / progress.max * 100);
+    setTimeout(changeProgress, 1000);
+}
+changeProgress();
