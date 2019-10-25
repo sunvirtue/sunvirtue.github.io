@@ -88,7 +88,7 @@
 .itm_hint{
   width: 60px;
   height: 60px;
-  background-color: blue;
+  background-color: #D2973D;/*blue*/
   transition: 200ms;
 }
 .itm_true{
