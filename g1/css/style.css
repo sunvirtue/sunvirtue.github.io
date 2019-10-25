@@ -31,6 +31,9 @@
   .rightAnswers, .wrongAnswers{
     border: 1px solid black;
   }
+  #perc{
+    right: 0;
+  }
 }
 .rightAnswers_flash {
   width: 120px;
