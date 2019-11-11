@@ -80,6 +80,24 @@
   cursor: pointer;
   flex-basis: 50% 50% 50% 50%;
 }
+.itm_close{
+  border-radius: 10px;
+  transition: .2s linear;
+  display: flex;
+  width: 60px;
+  height: 60px;
+  color: #fff;
+  padding: 5px;
+  margin: 5px;
+  justify-content: center;
+  align-items: center;
+  vertical-align: middle;
+  font-size: 24px;
+  cursor: pointer;
+  flex-basis: 50% 50% 50% 50%;
+  pointer-events: none;
+  background-color: gray;
+}
 
 .itm:hover {
   box-shadow: 0 0 0 0px #fff inset, 0 0 0 4px white inset;

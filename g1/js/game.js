@@ -11,8 +11,8 @@ var progress = document.getElementById('progress'),
 //Рассчет числа
 function mainCalculate(a, b){
   let calc = document.querySelector('.calcNum');
-  a = Math.random()*20;
-  b = Math.random()*20;
+  a = Math.random()*20;//20
+  b = Math.random()*20;//20
   calc.textContent = Math.floor(a) +' + '+ Math.floor(b)+'?';
   trueValue = Math.floor(a) + Math.floor(b);
   
@@ -43,6 +43,7 @@ function writingNumber(value, randValue, randItem){
     if(trueValue){
       document.getElementsByClassName('itm')[randItem].classList.add('itm_hint');
     }
+    isZero();
     document.getElementsByClassName('itm')[i].classList.remove('itm_hint');
   }
 }
@@ -62,6 +63,7 @@ function select(e){
   if(e.target.className == 'itm itm_hint'){
     e.target.classList.toggle('itm_true');
     if(e.target.classList.contains('itm_true')){
+      setTimeout(partBackTime, 1000);
       newRun();
     }
   }
@@ -105,16 +107,36 @@ function flashing(){
     setTimeout(backToOrigCol, 500);
   }
 }
+function isZero(){
+  if(trueValue == 0) {
+    mainCalculate();
+  }
+}
 function backToOrigCol(){
   rightAnswer.className = 'rightAnswers';
 }
 function changeProgress() {
     if (progress.value >= progress.max) {
+        notTouch();
         return;
     }
+    // partBackTime();
     percnt.textContent = progress.value;
     progress.value++;
     percent.textContent = Math.floor(progress.value / progress.max * 100);
     setTimeout(changeProgress, 1000);
 }
 changeProgress();
+function partBackTime(){
+  if(status == true && progress.value != 0){
+    // percnt.textContent = 20;
+    progress.value -= 5;
+    console.log(percnt.textContent);
+  }
+}
+function notTouch(){
+  for(let i = 0; i < document.getElementsByClassName('itm').length; i+1){
+    document.getElementsByClassName('itm')[i].className = 'itm_close'; 
+  }
+}
+
