@@ -1,0 +1,11 @@
+.big-text {
+  position: absolute;
+  font-size: 221px;//221
+  line-height: 305px;
+  color: $white;
+  opacity: 0.1;
+  top: 90%;
+  left: -50%;
+  z-index: -1;
+  // width: 100vw;
+}

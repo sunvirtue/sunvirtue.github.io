@@ -1,0 +1,59 @@
+.slider {
+  position: absolute;
+  transform: rotate(-90deg);
+  height: 705px;
+  z-index: 6;
+
+  &__item {
+    padding-left: 70px;//убрать
+    width: 705px;
+    font-size: 17px;
+    line-height: 24px;
+    color: rgba(255, 255, 255, 0.5);
+    transform: translate(0, 50%);
+    transition: all 500ms;
+
+    &::after {
+      content: '';
+      position: relative;
+      display: block;
+      background-color: $white;
+      width: 0;
+      transition: width 500ms;
+    }
+
+    &:hover {
+      color: $white;
+      text-indent: 35px;
+      cursor: pointer;
+
+      &::after {
+        position: relative;
+        top: -10px;
+        width: 25px;
+        height: 2px;
+        margin-top: -2px;
+      }
+    }
+  }
+
+  &__wrp {
+    padding-top: 135px;
+  }
+
+  &__progress-menu {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 705px;
+    height: 2px;
+
+    &::-webkit-progress-bar {
+      background-color: rgba(255, 255, 255, 0.1);
+      border-radius: 2px;
+    }
+
+    &::-webkit-progress-value {
+      background: $white;
+    }
+  }
+}

@@ -1,0 +1,39 @@
+include ../blocks/footer/footer.pug
+
+- var footer = require('../data/footer.json')
+-
+  loadAssets = function(file) {
+    const req = require.context(
+      "../assets/",
+      true, // Load files recursively. Pass false to skip recursion.
+      /^\.\/.*\.(svg|jpg|png|webp)$/ // Match files ending with .md.
+    );
+    return req(file);
+  }
+
+block vars
+
+doctype html
+html(lang='ru')
+  head
+    meta(charset='UTF-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0, user-scalable=no')
+    meta(http-equiv='X-UA-Compatible', content='ie=edge')
+    title We are team
+    block styles
+    each css in htmlWebpackPlugin.files.css
+      link(rel='stylesheet' href=css)
+    if htmlWebpackPlugin.files.extracted.css
+      each css in htmlWebpackPlugin.files.extracted.css.reverse()
+        link(class="mediaquerydependent", rel='stylesheet' data-href=css.file, data-media=css.query)
+  body
+    //- include ../blocks/header/header
+    //- include ../blocks/main/main
+    //- include ../blocks/projects/projects
+    //- include ../blocks/advantages/advantages
+    //- include ../blocks/services/services
+    //- include ../blocks/team/team
+    //- include ../blocks/footer/footer
+    +footer(footer)
+    each js in htmlWebpackPlugin.files.js
+      script(type='text/javascript' src=js async defer)

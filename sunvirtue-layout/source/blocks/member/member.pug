@@ -1,0 +1,11 @@
+mixin member(data, className)
+  .member(class= "team__list squad")
+    each key in data
+      .squad__member.squad__member_bg.mb-90.mb-60(class= "squad__member_bg_" +key.bgValue)
+        - var count = 0
+        each val in key
+          if className[count] === undefined
+            - break
+          else
+            div(class= "member__" +className[count]+ " inner-team__" +className[count])= val
+              - count++

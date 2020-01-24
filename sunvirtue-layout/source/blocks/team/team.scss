@@ -1,0 +1,152 @@
+.team {
+  position: relative;
+  background-color: $black;
+
+  &__main-image {
+    position: relative;
+    max-width: 1720px;
+    height: 464px;
+
+    @media (max-width: 680px) {
+      height: 205px;
+    }
+
+    &_bg {
+      background: url('./assets/images/team.png') no-repeat center;
+      background-size: cover;
+      position: relative;
+      z-index: 0;
+    }
+  }
+
+  &__descr {
+    font-size: 30px;
+    line-height: 43px;
+    color: $white;
+
+    @media (max-width: $mobile) {
+      font-size: 25px;
+      line-height: 36px;
+    }
+  }
+
+  &__box {
+    position: relative;
+    z-index: 5;
+  }
+
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    @media (max-width: $mobile) {
+      flex-wrap: nowrap;
+      flex-direction: column;
+    }
+  }
+
+  &__principles {
+    position: relative;
+    z-index: 0;
+    background-color: $gray-23;
+  }
+}
+
+.inner-team {
+  &__container {
+    padding: 100px 15.625%;
+    padding-top: 0;
+
+    @media (max-width: $mobile) {
+      padding: 50px 5.3%;
+    }
+
+    @media (max-width: 680px) {
+      padding: 0 5.3%;
+    }
+  }
+
+  &__main-image {
+    margin: 0 auto;
+    margin-top: 105px;
+
+    @media (max-width: 1920px) {
+      margin-left: 5.2%;
+      margin-right: 5.2%;
+    }
+
+    @media (max-width: 1440px) {
+      margin-right: 7.638%;
+      margin-left: 15.625%;
+    }
+
+    @media (max-width: $mobile) {
+      margin-left: 5.3%;
+      margin-right: 5.3%;
+    }
+
+    @media (max-width: 680px) {
+      margin-top: 65px;
+    }
+  }
+
+  &__descr {
+    @media (max-width: 1920px) {
+      padding-top: 165px;
+      padding-bottom: 135px;
+    }
+
+    @media (max-width: 1440px) {
+      padding-top: 95px;
+      padding-bottom: 115px;
+    }
+
+    @media (max-width: $mobile) {
+      padding-top: 75px;
+      padding-bottom: 95px;
+    }
+
+    @media (max-width: 680px) {
+      padding-top: 45px;
+      padding-bottom: 50px;
+      font-size: 25px;
+      line-height: 36px;
+    }
+  }
+
+  &__name {
+    padding-top: 58px;
+  }
+
+  &__term {
+    padding-top: 155px;
+  }
+
+  &__name,
+  &__position,
+  &__term,
+  &__experience {
+    padding-left: 14.44%;
+  }
+}
+
+.mb-90 {
+  margin-bottom: 90px;
+}
+
+.mb-60 {
+  @media (max-width: $mobile) {
+    margin-bottom: 60px;
+  }
+}
+
+.pb-100 {
+  padding-bottom: 100px;
+}
+
+.pb-50 {
+  @media (max-width: $mobile) {
+    padding-bottom: 50px;
+  }
+}

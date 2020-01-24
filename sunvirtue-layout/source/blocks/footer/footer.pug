@@ -1,0 +1,29 @@
+include ../form/form.pug
+include ../principles/principles.pug
+
+mixin footer(data)
+  .footer.inner
+    .footer__container.inner__container
+      h2.footer__communication.inner__communication Свяжитесь с нами
+      .footer__wrp
+        .footer__contacts
+          mixin contacts(className)
+              each contacts in data.contacts
+                each alloted in data.alloted
+                  a(class= 'footer__' +className, href='#')= contacts[className]
+                    span.pl-5(class= 'footer__' +className+ '_alloted')= alloted[className+'_alloted']
+          +contacts("adress")
+          +contacts("num")
+          +contacts("mail")
+
+          //- a.footer__num(href='#') Телефон: 
+          //-   span.footer__num_alloted +7 (495) 200-22-44
+          //- a.footer__mail(href='#') E-mail: 
+          //-   span.footer__mail_alloted weareteam@gmail.com
+        .footer__connect
+          +form()
+      .footer__bottom.inner__bottom
+        .footer__wrp
+          .footer__weareteam weareteam © 2018
+          .footer__idem Дизайн и разработка 
+            a.footer__idem_alloted(href='https://www.idem.agency/', target='_blank') idem.agency

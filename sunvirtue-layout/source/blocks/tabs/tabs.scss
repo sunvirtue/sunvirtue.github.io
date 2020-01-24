@@ -1,0 +1,48 @@
+.tabs {
+  width: 100%;
+  background-color: $black;
+
+  &__category-year {
+    width: 1084px;
+    margin: 0 auto;
+    border-bottom: 1px solid $white;
+  }
+}
+
+.year {
+  display: flex;
+  justify-content: space-between;
+
+  &__num {
+    color: $white;
+  }
+
+  &__stick,
+  &__stick-start,
+  &__stick-stop {
+    position: relative;
+    background-color: $white;
+    margin: 0 auto;
+    width: 1px;
+    height: 8px;
+    margin-top: 10px;
+  }
+
+  &__stick {
+    &::before,
+    &::after {
+      content: '';
+      display: block;
+      position: absolute;
+      bottom: 0;
+      background-color: $white;
+      background-image: repeating-linear-gradient(90deg, transparent, transparent 0, $black 1px, $black 44px);
+      width: calc(( 1084px - 34px) / 2);
+      height: 4px;
+    }
+
+    &::after {
+      transform: translate(-100%, 0);
+    }
+  }
+}

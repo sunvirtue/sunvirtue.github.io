@@ -1,0 +1,31 @@
+include ../text/text.pug
+include ../member/member.pug
+include ../principles/principles.pug
+
+block variables
+  - var classNames = ["name", "position", "term", "experience"]
+  - var team = require('../data/team.json')
+  script.
+    window.INIT = {
+      team: !{JSON.stringify(team)}
+    };
+
+mixin team(className, bgValue)
+  .team(class= "inner-team text")
+    if bgValue
+      div(class= "team__" +className+ " team__" +className+ "_bg" + " team__" +className+ "_bg_" +bgValue).inner-team__main-image
+    else
+      div(class= "team__" +className+ " team__" +className+ "_bg").inner-team__main-image
+    //- p.text__header-title We are team
+    .team__container.inner-team__container
+      p.team__descr.inner-team__descr Мы команда профессионалов, влюбленных в свое дело, которые образуют единый организм, создающий для вас блестящие проекты
+      .team__box
+        +text('symbol', 'М')
+        +text('symbol', 'А')
+        +text('symbol', 'Д')
+        +text('symbol', 'Р')
+        +member(team.member, classNames)
+    .team__principles.inner-principles
+      +text('footer-title', 'weareteam')
+      +principles(team.principles)
++team('main-image')

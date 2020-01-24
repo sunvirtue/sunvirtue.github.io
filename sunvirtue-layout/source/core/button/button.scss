@@ -1,0 +1,21 @@
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  min-width: 54px;
+  height: 54px;
+  border-radius: 50%;
+  border: 1px solid $white;
+
+  &__angle {
+    position: relative;
+    left: -2px;
+    width: 10px;
+    height: 10px;
+    border: 2px solid transparent;
+    border-right: 2px solid $white;
+    border-top: 2px solid $white;
+    transform: rotate(45deg);
+  }
+}

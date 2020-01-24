@@ -1,0 +1,105 @@
+.header-top {
+  position: relative;
+  height: 122px;
+  background-color: $black;
+
+  &__box {
+    display: flex;
+    height: 100%;
+    justify-content: space-between;
+    // position: relative;
+
+    @media (max-width: $mobile) {
+      height: 70%;
+    }
+  }
+
+  &__phone-wrp {
+    font-size: 16px;
+    color: $white;
+
+    @media (max-width: 680px) {
+      display: none;
+    }
+  }
+
+  &__logo-wrp {
+    position: absolute;
+    top: 30px;//64px
+
+    @media (max-width: 1920px) {
+      left: 5.2%;
+    }
+
+    @media (max-width: 1440px) {
+      left: 45px;
+    }
+
+    @media (max-width: $mobile) {
+      top: 27px;
+      left: 40px;
+    }
+
+    @media (max-width: 680px) {
+      top: 23px;
+      left: 13px;
+    }
+  }
+
+  &__logo {
+    width: 170px;
+    height: initial;
+
+    @media (max-width: $mobile) {
+      width: 145px;
+    }
+
+    @media (max-width: 680px) {
+      width: 115px;
+    }
+  }
+
+  &__menu {
+    display: flex;
+    position: absolute;
+    top: 82px;
+
+    @media (max-width: 1920px) {
+      right: 5.2%;
+    }
+
+    @media (max-width: 1440px) {
+      right: 45px;
+    }
+
+    @media (max-width: $mobile) {
+      top: 45px;
+      right: 40px;
+    }
+
+    @media (max-width: 680px) {
+      top: 23px;
+      right: 13px;
+    }
+  }
+
+  &__descr-wrp {
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    color: rgba(255, 255, 255, 0.1);
+    font-size: 221px;
+    // color: $red-da;
+    background: repeating-linear-gradient(60deg, transparent, transparent 2px, rgba(255, 255, 255, 0.1) 2px, rgba(255, 255, 255, 0.1) 6px);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  &__descr {
+    position: relative;
+    padding: 345px 187px 135px 129px;
+    font-size: 35px;
+    line-height: 55px;
+    text-align: left;
+  }
+}

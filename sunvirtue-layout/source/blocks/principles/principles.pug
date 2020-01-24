@@ -1,0 +1,5 @@
+mixin principles(data)
+	.principles(class= 'inner-principles__container')
+		each info in data
+			h2.principles__title.inner-principles__title= info.title
+			p.principles__descr.inner-principles__descr= info.descr

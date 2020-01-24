@@ -1,0 +1,120 @@
+.member {
+  &__name {
+    font-size: 30px;
+    line-height: 43px;
+  }
+
+  &__position,
+  &__term,
+  &__experience {
+    font-size: 16px;
+    line-height: 23px;
+  }
+}
+
+.squad {
+  position: relative;
+
+  &__member {
+    width: calc(31.25% + 16%);
+    color: transparent;
+    height: 400px;
+    transition: $ease;
+
+    @media (max-width: $mobile) {
+      width: 100%;
+      padding: 0 15%;
+
+      &:nth-child(-n + 2) {
+        display: none;
+      }
+
+      &:nth-child(n + 9) {
+        display: none;
+      }
+
+      &:nth-child(4) {
+        display: none;
+      }
+
+      &:nth-child(6) {
+        display: none;
+      }
+
+      &:nth-child(7) {
+        order: -1;
+      }
+    }
+
+    @media (max-width: 680px) {
+      &:nth-child(1) {
+        display: block;
+        order: 1;
+      }
+
+      &:nth-child(8) {
+        display: none;
+      }
+    }
+
+    &_bg {
+      background-size: cover;
+      background-color: $gray;//vremenno
+
+      &_alena {
+        background: url('./assets/images/Alena.jpg') no-repeat center;
+      }
+
+      &_dima {
+        background: url('./assets/images/Dima.jpg') no-repeat center;
+      }
+
+      &_angelina {
+        background: url('./assets/images/Angelina.jpg') no-repeat center;
+      }
+
+      &_albert {
+        background: url('./assets/images/Albert.jpg') no-repeat center;
+      }
+
+      &_gosha {
+        background: url('./assets/images/Gosha.jpg') no-repeat center;
+      }
+
+      &_lisa {
+        background: url('./assets/images/Lisa.jpg') no-repeat center;
+      }
+
+      &_lisa_2 {
+        background: url('./assets/images/Lisa_2.jpg') no-repeat center;
+      }
+
+      &_girl {
+        background: url('./assets/images/girl.jpg') no-repeat center;
+      }
+
+      &_ira {
+        background: url('./assets/images/ira.jpg') no-repeat center;
+      }
+
+      &_boy {
+        background: url('./assets/images/boy.jpg') no-repeat;
+        background-position: 50% 0%;
+      }
+    }
+
+    &:hover {
+      cursor: pointer;
+      color: $white;
+      background: $black;
+    }
+
+    &:nth-child(2n) {
+      transform: translate(0, 90px);
+
+      @media (max-width: $mobile) {
+        transform: none;
+      }
+    }
+  }
+}

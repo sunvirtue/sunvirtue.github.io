@@ -1,0 +1,70 @@
+.header {
+  &__inner {
+    margin-left: 25px;
+  }
+}
+
+.wrp {
+  position: relative;
+  height: 20px;
+  cursor: pointer;
+  z-index: 99;
+}
+
+.hamburger {
+  width: 25px;
+  height: 2px;
+  background: $red-d6;
+
+  &::before {
+    position: absolute;
+    top: 8px;
+    width: 25px;
+    height: 2px;
+    content: '';
+    display: block;
+    background: $red-d6;
+    transition: 500ms;
+  }
+
+  &::after {
+    position: absolute;
+    top: 16px;
+    width: 25px;
+    height: 2px;
+    content: '';
+    display: block;
+    background: $red-d6;
+    transition: 500ms;
+  }
+
+  &_close {
+    width: 25px;
+    height: 0;
+    background: $red-6a;
+
+    &::before {
+      position: absolute;
+      top: 8px;
+      width: 25px;
+      height: 2px;
+      transform: rotate(-135deg);
+      content: '';
+      display: block;
+      background: $red-6a;
+      transition: 500ms;
+    }
+
+    &::after {
+      position: absolute;
+      top: 8px;
+      width: 25px;
+      height: 2px;
+      transform: rotate(135deg);
+      content: '';
+      display: block;
+      background: $red-6a;
+      transition: 500ms;
+    }
+  }
+}

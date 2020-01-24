@@ -1,0 +1,149 @@
+.projects {
+  background-color: $black;
+
+  &_inner {
+    padding: 0 224px;
+  }
+
+  &__main-image {
+    background: url('./assets/images/Image.jpg') no-repeat center;
+    background-size: cover;
+    width: 100%;
+    height: 593px;//593px
+    position: relative;
+    z-index: 0;
+  }
+
+  &__list-wrp {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    position: relative;
+
+    &:nth-child(1n) {
+      align-items: flex-start;
+      z-index: 5;
+    }
+
+    &:nth-child(2n) {
+      align-items: flex-end;
+      transform: translate(0, -68px);//28px
+      z-index: 5;
+    }
+  }
+
+  &__list-box {
+    display: flex;
+    flex-direction: column;
+    color: $gray-8d;
+    position: absolute;
+    z-index: 55;
+  }
+
+  &__item-1,
+  &__item-2 {
+    position: relative;
+    max-width: 450px;
+    width: 100%;
+    z-index: 10;
+
+    &:hover {
+      opacity: 0.7;
+    }
+
+    &_bg {
+      height: auto;
+    }
+  }
+
+  &__title {
+    // position: relative;
+  }
+
+  &__all {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 172px;
+    margin: 0 auto;
+  }
+
+  &__link {
+    color: $white;
+  }
+}
+
+.big-text-box {
+  position: relative;
+  height: 100%;
+  bottom: 0;
+}
+
+.title {
+  position: relative;
+  transition: all 500ms;
+  z-index: 5;
+
+  &::after {
+    content: '';
+    // position: relative;
+    display: block;
+    background-color: $white;
+    width: 0;
+    transition: width 500ms;
+  }
+
+  &:hover {
+    color: $white;
+    text-indent: 35px;
+    cursor: pointer;
+
+    &::after {
+      position: absolute;
+      bottom: 10px;
+      width: 25px;
+      height: 2px;
+      margin-top: -2px;
+    }
+  }
+
+  &__inner {
+    padding-top: 24px;
+    max-width: 450px;
+    // padding-right: 20px;
+    box-sizing: border-box;
+  }
+}
+
+.inner {
+  &__big-text {
+    font-size: 180px;
+    position: absolute;
+    left: -120px;
+    bottom: 35px;
+    width: 100%;
+    height: 207px;
+    color: blue;
+    background: repeating-linear-gradient(60deg, transparent, transparent 2px, $red-da 2px, $red-da 6px);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    z-index: -1;
+  }
+}
+
+.mt-78 {
+  margin-top: 78px;
+}
+
+.-mt-10 {
+  margin-top: -10px;
+}
+
+.mt-20 {
+  margin-top: 20px;
+}

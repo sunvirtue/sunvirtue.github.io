@@ -1,0 +1,73 @@
+.form {
+  display: flex;
+
+  @media (max-width: $mobile) {
+    align-items: center;
+  }
+
+  // &__name,
+  // &__num {
+  //   background-color: rgba(0, 0, 0, 0);
+  //   padding: 0 10px;
+  //   font-size: 14px;
+  //   line-height: 24px;
+  //   width: 210px;
+  //   border-bottom: 2px solid $gray-a3;
+  //   color: $white;
+  // }
+
+  &__box {
+    display: flex;
+    flex-wrap: wrap;
+
+    @media (max-width: $mobile) {
+      width: 210px;
+    }
+  }
+
+  &__descr {
+    width: 399px;//399px
+    color: $gray-a3;
+    font-size: 14px;
+    line-height: 24px;
+
+    @media (max-width: $mobile) {
+      width: 210px;
+    }
+  }
+}
+
+.inner {
+  &__form-name {
+    margin-right: 30px;
+
+    @media (max-width: $mobile) {
+      margin-right: 0;
+      margin-bottom: 25px;
+    }
+  }
+}
+
+.mlr-30 {
+  margin: 0 30px;
+
+  @media (max-width: 680px) {
+    margin-left: 0;
+  }
+}
+
+.mt-50 {
+  @media (max-width: 680px) {
+    margin-top: 50px;
+  }
+}
+
+// .ml-30 {
+//   @media (max-width: $mobile) {
+//       margin-left: 30px;
+//     }
+// }
+
+.pt-15 {
+  padding-top: 15px;
+}

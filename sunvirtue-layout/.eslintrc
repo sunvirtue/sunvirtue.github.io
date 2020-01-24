@@ -1,0 +1,19 @@
+{
+  "globals": {
+    "window": true,
+    "document": true,
+    "PIXI": true,
+    "XMLHttpRequest": true,
+    "FormData": true,
+    "pageYOffset": true,
+    "google": true,
+    "GoogleMapsLoader": true
+  },
+  "extends": "airbnb-base",
+  "rules": {
+    "linebreak-style": 0,
+    "no-new": 0,
+    "global-require": 0,
+    "no-param-reassign": 0
+  }
+}

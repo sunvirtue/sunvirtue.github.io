@@ -1,0 +1,16 @@
+{
+  "contacts": [
+    {
+      "adress": "Адрес:",
+      "num": "Телефон:",
+      "mail": "E-mail:"
+    }
+  ],
+  "alloted": [
+    {
+      "adress_alloted": "Москва, Ленинский пр-т, 20А",
+      "num_alloted": "+7 (495) 200-22-44",
+      "mail_alloted": "weareteam@gmail.com"
+    }
+  ]
+}

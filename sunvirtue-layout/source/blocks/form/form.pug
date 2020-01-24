@@ -1,0 +1,12 @@
+include ../../core/button/button.pug
+include ../../core/input/input.pug
+
+block content
+  mixin form()
+    .form.inner
+      .form__container.mlr-30.mt-50
+        form.form__box(action='#', method='post')
+          +input('text', 'name', 'name', 'Ваше имя').inner__form-name
+          +input('text', 'number', 'num', '+7 (___)___-__-__')
+        p.form__descr.pt-15 Нажимая на кнопку, Вы даете согласие на обработку персональных данных
+      +button('google.com', 'angle')
