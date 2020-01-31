@@ -21,7 +21,7 @@
 		<form action="#" name="user-data" method="post">
 			<div class="form-user-data inner__align">
 				<h5 class="block-operation inner__operation">Данные о ИП/юридическом лице</h5>
-				<div class="block-hide-show">
+				
 					<p class="block-descr inner__descr">Укажите ИНН или название ИП/юридического лица, и большинство полей будут автоматически заполнены. Проверьте, пожалуйста, корректность указанных данных</p>
 					<div class="block-box">
 						<div class="block-input">
@@ -37,11 +37,11 @@
 							<label class="block-input__title inner__i-title" for="f-name">Полное наименование ИП/юридического лица</label>
 							<input type="text" class="block-input__form-full inner__i-form" id="f-name" placeholder="Введите полное название" required>
 					</div>
-				</div>
+				
 			</div>
 			<div class="form-requisites inner__align">
 				<h5 class="block-operation inner__operation">Реквизиты расчетного счета</h5>
-				<div class="block-hide-show">
+				
 					<p class="block-descr inner__descr">Укажите реквизиты расчетного счета ИП/юридического лица, на который банк будет зачислять денежные средства в рамках торгового эквайринга</p>
 					<div class="block-box">
 						<div class="block-input">
@@ -65,12 +65,12 @@
 							<label class="block-input__title inner__i-title" for="correspondent-account">Корреспондентский счет</label>
 							<input type="text" class="block-input__form inner__i-form" id="correspondent-account" placeholder="45400000000000000001" pattern="[0-9]{20}" maxlength="20" required>
 						</div>
-					</div>
+					
 				</div>
 			</div>
 			<div class="form-legal-address inner__align">
 				<h5 class="block-operation inner__operation pb-12">Юридический адрес ИП/юридического лица</h5>
-				<div class="block-hide-show">
+				
 					<div class="block-input">
 						<input type="text" class="block-input__form-full inner__i-form" id="legal-address" placeholder="Индекс, регион, город, улица, дом, корпус/строение, офис/квартира" required>
 					</div>
@@ -78,19 +78,19 @@
 						<input class="block-checkbox__input" type="checkbox" name="confirm-address" id="confirm-address">
 						<label class="block-checkbox__label" for="confirm-address">Совпадает с фактическим адресом</label>
 					</div>
-				</div>
+				
 			</div>
 			<div class="form-actual-address inner__align">
 				<h5 class="block-operation inner__operation pb-12">Фактический адрес ИП/юридического лица</h5>
-				<div class="block-hide-show">
+				
 					<div class="block-input">
 						<input type="text" class="block-input__form-full inner__i-form" id="actual-address" placeholder="Индекс, регион, город, улица, дом, корпус/строение, офис/квартира" required>
 					</div>
-				</div>
+				
 			</div>
 			<div class="form-license-information inner__align">
 				<h5 class="block-operation inner__operation pb-12">Сведения о лицензии</h5>
-				<div class="block-hide-show">
+				
 					<div class="block-input block-checkbox block-align mt-10">
 						<input class="block-checkbox__input" type="checkbox" name="license-information" id="license-information">
 						<label class="block-checkbox__label" for="license-information">Деятельность подлежит лицензированию</label>
@@ -127,12 +127,12 @@
 						<label class="block-input__title inner__i-title" for="list-species">Перечень видов лицензируемой деятельности</label>
 						<input type="text" class="block-input__form-full inner__i-form" id="list-species" placeholder="Перечислите виды деятельности, подлежащие лицензированию" required>
 					</div>
-				</div>
+				
 			</div>
 			<div class="form-data-application inner__align">
 				<h5 class="block-operation inner__operation pb-12">Данные о внесении в ЕГРЮЛ/ИП</h5>
 				<label class="tooltip-icon ml-4" data-tooltip="Данные о внесении в ЕГРЮЛ/ИП"></label>
-				<div class="block-hide-show">
+				
 					<div class="block-box">
 						<div class="block-input">
 							<label class="block-input__title inner__i-title" for="number-certificate">Номер свидетельства о внесении</label>
@@ -147,12 +147,12 @@
 						<label class="block-input__title inner__i-title" for="entry-by">Государственный орган, осуществивший внесение </label>
 						<input type="text" class="block-input__form-full inner__i-form" id="entry-by" placeholder="Наименование государственного органа" required>
 					</div>
-				</div>
+				
 			</div>
 			<div class="form-data-manager inner__align">
 				<h5 class="block-operation inner__operation pb-12">Данные о руководителе</h5>
 				<label class="tooltip-icon ml-4" data-tooltip="Данные о руководителе"></label>
-				<div class="block-hide-show">
+				
 					<div class="block-input">
 						<label class="block-input__title inner__i-title" for="manager-fio">Фамилия, имя и отчество</label>
 						<input type="text" class="block-input__form-full inner__i-form" id="manager-fio" placeholder="Иванов Иван Иванович" required>
@@ -197,11 +197,11 @@
 							<option value="Беларусь">Беларусь</option>
 						</select>
 					</div>
-				</div>	
+				
 			</div>
 			<div class="form-passport inner__align">
 				<h5 class="block-operation inner__operation pb-12">Документ, удостоверяющий личность</h5>
-				<div class="block-hide-show">
+				
 					<div class="block-box">
 						<div class="block-input sans">
 							<label class="block-input__title inner__i-title sans__inter" for="passport-series">Серия</label>
@@ -220,11 +220,11 @@
 						<label class="block-input__title inner__i-title sans__inter" for="passport-issued-by">Кем выдан</label>
 						<input type="text" class="block-input__form-full inner__i-form" id="passport-issued-by" placeholder="Как в документе, удостоверяющем личность" required>
 					</div>
-				</div>
+				
 			</div>
 			<div class="form-migration-card inner__align">
 				<h5 class="block-operation inner__operation pb-12">Данные миграционной карты</h5>
-				<div class="block-hide-show">
+				
 					<div class="block-box">
 						<div class="block-input">
 							<label class="block-input__title inner__i-title sans__inter" for="migration-card-number">Номер</label>
@@ -245,11 +245,11 @@
 							<input type="date" class="block-input__date inner__i-date datepicker" id="migration-end-date" required>
 						</div>
 					</div>
-				</div>
+				
 			</div>
 			<div class="form-visa-card inner__align">
 				<h5 class="block-operation inner__operation pb-12">Данные визы/разрешения на временное пребывание/вида на жительство</h5>
-				<div class="block-hide-show">
+				
 					<div class="block-box">
 						<div class="block-input">
 							<label class="block-input__title inner__i-title sans__inter" for="visa-card-number">Номер</label>
@@ -270,18 +270,18 @@
 							<input type="date" class="block-input__date inner__i-date datepicker" id="visa-end-date" required>
 						</div>
 					</div>
-				</div>
+				
 			</div>
 			<div class="form-public-executive inner__align">
 				<h5 class="block-operation inner__operation pb-12">Являетесь ли вы публичным должностным или иностранным публичным должностным лицом?</h5>
-				<div class="block-hide-show">
+				
 					<div class="block-input">
 						<input type="radio" class="block-input__form" name="public-executive" id="yes-public">
 						<label class="block-radio__label inner__i-title" for="yes-public">Да</label>
 						<input type="radio" class="block-input__form" name="public-executive" id="no-public" checked>
 						<label class="block-radio__label inner__i-title ml-18p" for="no-public">Нет</label>
 					</div>
-				</div>
+				
 			</div>
 			<div class="block-submit inner__align mb-120 mt-40"><input type="submit" class="block-submit__input" value="Далее"></div>
 		</form>
