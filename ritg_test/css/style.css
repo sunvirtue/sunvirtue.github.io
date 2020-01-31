@@ -142,6 +142,9 @@
 	padding-right: 20px;
 	cursor: pointer;
 }
+.block-hide-show{
+
+}
 
 /*flags and checkbox*/
 input[type="date"]::-webkit-calendar-picker-indicator {
@@ -194,7 +197,6 @@ input[type="radio"]:not(:checked) + label:before {
     position: absolute;
     left: 0px;
     top: 0px;
-    transform: translate(0, 9px);
     width: 28px;
     height: 28px;
     border: 2px solid #bbc1c7;
@@ -216,6 +218,7 @@ input[type="radio"]:not(:checked) + label:before
 }
 input[type="radio"]:checked + label:before, 
 input[type="radio"]:not(:checked) + label:before {
+	transform: translate(0, 9px);
     border-radius: 100%;
 }
 input[type="checkbox"]:checked + label:after, 
@@ -311,6 +314,7 @@ input[type="radio"]:checked + label:after {
 }
 .tooltip-icon{
 	display: inline-flex;
+	align-items: center;
 	background-image: url(../img/icons/tooltip-icon.png);
 	width: 16px;
 	height: 16px;
@@ -414,11 +418,11 @@ input[type="radio"]:checked + label:after {
     .block-select__form{
 		width: calc(100% + 3px);
     }
+    .block-operation{
+		cursor: pointer;
+    }
     .ml-16{
 		margin: 0;
-	}
-	.inner__align{
-		padding: 0 5%;
 	}
 }
 @media screen and (min-width: 768px) and (max-width: 1023px) {

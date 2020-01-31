@@ -21,244 +21,266 @@
 		<form action="#" name="user-data" method="post">
 			<div class="form-user-data inner__align">
 				<h5 class="block-operation inner__operation">Данные о ИП/юридическом лице</h5>
-				<p class="block-descr inner__descr">Укажите ИНН или название ИП/юридического лица, и большинство полей будут автоматически заполнены. Проверьте, пожалуйста, корректность указанных данных</p>
-				<div class="block-box">
+				<div class="block-hide-show">
+					<p class="block-descr inner__descr">Укажите ИНН или название ИП/юридического лица, и большинство полей будут автоматически заполнены. Проверьте, пожалуйста, корректность указанных данных</p>
+					<div class="block-box">
+						<div class="block-input">
+							<label class="block-input__title inner__i-title" for="inn">ИНН</label>
+							<input type="text" class="block-input__form inner__i-form" id="inn" placeholder="0000000000" pattern="[0-9]{10}" maxlength="10" required>
+						</div>
+						<div class="block-input ml-16">
+							<label class="block-input__title inner__i-title" for="ogrn">ОГРН/ОГРНИП</label>
+							<input type="text" class="block-input__form inner__i-form" id="ogrn" placeholder="0000000000" pattern="[0-9]{10}" maxlength="10" required>
+						</div>
+					</div>
 					<div class="block-input">
-						<label class="block-input__title inner__i-title" for="inn">ИНН</label>
-						<input type="text" class="block-input__form inner__i-form" id="inn" placeholder="0000000000" pattern="[0-9]{10}" maxlength="10" required>
+							<label class="block-input__title inner__i-title" for="f-name">Полное наименование ИП/юридического лица</label>
+							<input type="text" class="block-input__form-full inner__i-form" id="f-name" placeholder="Введите полное название" required>
 					</div>
-					<div class="block-input ml-16">
-						<label class="block-input__title inner__i-title" for="ogrn">ОГРН/ОГРНИП</label>
-						<input type="text" class="block-input__form inner__i-form" id="ogrn" placeholder="0000000000" pattern="[0-9]{10}" maxlength="10" required>
-					</div>
-				</div>
-				<div class="block-input">
-						<label class="block-input__title inner__i-title" for="f-name">Полное наименование ИП/юридического лица</label>
-						<input type="text" class="block-input__form-full inner__i-form" id="f-name" placeholder="Введите полное название" required>
 				</div>
 			</div>
 			<div class="form-requisites inner__align">
 				<h5 class="block-operation inner__operation">Реквизиты расчетного счета</h5>
-				<p class="block-descr inner__descr">Укажите реквизиты расчетного счета ИП/юридического лица, на который банк будет зачислять денежные средства в рамках торгового эквайринга</p>
-				<div class="block-box">
-					<div class="block-input">
-						<label class="block-input__title inner__i-title" for="bank-name">Наименование банка</label>
-						<input type="text" class="block-input__form inner__i-form" id="bank-name" placeholder="Укажите название банка" required>
+				<div class="block-hide-show">
+					<p class="block-descr inner__descr">Укажите реквизиты расчетного счета ИП/юридического лица, на который банк будет зачислять денежные средства в рамках торгового эквайринга</p>
+					<div class="block-box">
+						<div class="block-input">
+							<label class="block-input__title inner__i-title" for="bank-name">Наименование банка</label>
+							<input type="text" class="block-input__form inner__i-form" id="bank-name" placeholder="Укажите название банка" required>
+						</div>
+						<div class="block-input ml-16">
+							<label class="block-input__title inner__i-title" for="bank-bik">БИК банка</label>
+							<input type="text" class="block-input__form inner__i-form" id="bank-bik" placeholder="0000000000" pattern="[0-9]{9}" maxlength="9" required>
+						</div>
 					</div>
-					<div class="block-input ml-16">
-						<label class="block-input__title inner__i-title" for="bank-bik">БИК банка</label>
-						<input type="text" class="block-input__form inner__i-form" id="bank-bik" placeholder="0000000000" pattern="[0-9]{9}" maxlength="9" required>
-					</div>
-				</div>
-				<div class="block-box">
-					<div class="block-input">
-					<div class="block-align">
-						<label class="block-input__title inner__i-title" for="payment-account">Расчетный счет</label>
-						<div class="tooltip-icon ml-4" data-tooltip="Расчетный счет"></div>
-					</div>
-					<input type="text" class="block-input__form inner__i-form" id="payment-account" placeholder="45400000000000000001" pattern="[0-9]{20}" maxlength="20" required>
-					</div>
-					<div class="block-input ml-16">
-						<label class="block-input__title inner__i-title" for="correspondent-account">Корреспондентский счет</label>
-						<input type="text" class="block-input__form inner__i-form" id="correspondent-account" placeholder="45400000000000000001" pattern="[0-9]{20}" maxlength="20" required>
+					<div class="block-box">
+						<div class="block-input">
+						<div class="block-align">
+							<label class="block-input__title inner__i-title" for="payment-account">Расчетный счет</label>
+							<div class="tooltip-icon ml-4" data-tooltip="Расчетный счет"></div>
+						</div>
+						<input type="text" class="block-input__form inner__i-form" id="payment-account" placeholder="45400000000000000001" pattern="[0-9]{20}" maxlength="20" required>
+						</div>
+						<div class="block-input ml-16">
+							<label class="block-input__title inner__i-title" for="correspondent-account">Корреспондентский счет</label>
+							<input type="text" class="block-input__form inner__i-form" id="correspondent-account" placeholder="45400000000000000001" pattern="[0-9]{20}" maxlength="20" required>
+						</div>
 					</div>
 				</div>
 			</div>
 			<div class="form-legal-address inner__align">
 				<h5 class="block-operation inner__operation pb-12">Юридический адрес ИП/юридического лица</h5>
-				<div class="block-input">
-					<input type="text" class="block-input__form-full inner__i-form" id="legal-address" placeholder="Индекс, регион, город, улица, дом, корпус/строение, офис/квартира" required>
-				</div>
-				<div class="block-input block-checkbox block-align mt-23">
-					<input class="block-checkbox__input" type="checkbox" name="confirm-address" id="confirm-address">
-					<label class="block-checkbox__label" for="confirm-address">Совпадает с фактическим адресом</label>
+				<div class="block-hide-show">
+					<div class="block-input">
+						<input type="text" class="block-input__form-full inner__i-form" id="legal-address" placeholder="Индекс, регион, город, улица, дом, корпус/строение, офис/квартира" required>
+					</div>
+					<div class="block-input block-checkbox block-align mt-23">
+						<input class="block-checkbox__input" type="checkbox" name="confirm-address" id="confirm-address">
+						<label class="block-checkbox__label" for="confirm-address">Совпадает с фактическим адресом</label>
+					</div>
 				</div>
 			</div>
 			<div class="form-actual-address inner__align">
 				<h5 class="block-operation inner__operation pb-12">Фактический адрес ИП/юридического лица</h5>
-				<div class="block-input">
-					<input type="text" class="block-input__form-full inner__i-form" id="actual-address" placeholder="Индекс, регион, город, улица, дом, корпус/строение, офис/квартира" required>
+				<div class="block-hide-show">
+					<div class="block-input">
+						<input type="text" class="block-input__form-full inner__i-form" id="actual-address" placeholder="Индекс, регион, город, улица, дом, корпус/строение, офис/квартира" required>
+					</div>
 				</div>
 			</div>
 			<div class="form-license-information inner__align">
 				<h5 class="block-operation inner__operation pb-12">Сведения о лицензии</h5>
-				<div class="block-input block-checkbox block-align mt-10">
-					<input class="block-checkbox__input" type="checkbox" name="license-information" id="license-information">
-					<label class="block-checkbox__label" for="license-information">Деятельность подлежит лицензированию</label>
-				</div>
-				<div class="block-input mt-14">
-					<label class="block-input__title inner__i-title" for="type-license">Вид лицензии</label>
-					<input type="text" class="block-input__form-full inner__i-form" id="type-license" placeholder="Введите вид лицензии" required>
-				</div>
-				<div class="block-box">
-					<div class="block-input">
-						<label class="block-input__title inner__i-title" for="name-license">Номер лицензии</label>
-						<input type="text" class="block-input__form inner__i-form" id="name-license" placeholder="000000000000000" pattern="[0-9]{15}" maxlength="15" required>
+				<div class="block-hide-show">
+					<div class="block-input block-checkbox block-align mt-10">
+						<input class="block-checkbox__input" type="checkbox" name="license-information" id="license-information">
+						<label class="block-checkbox__label" for="license-information">Деятельность подлежит лицензированию</label>
 					</div>
-					<div class="block-input ml-16">
-						<label class="block-input__title inner__i-title" for="issued-license">Кем выдана</label>
-						<input type="text" class="block-input__form inner__i-form" id="issued-license" placeholder="Организация, выдавшая лицензию" required>
+					<div class="block-input mt-14">
+						<label class="block-input__title inner__i-title" for="type-license">Вид лицензии</label>
+						<input type="text" class="block-input__form-full inner__i-form" id="type-license" placeholder="Введите вид лицензии" required>
 					</div>
-				</div>
-				<div class="block-box">
-					<div class="block-input">
-						<label class="block-input__title inner__i-title" for="date-issued">Дата выдачи</label>
-						<input type="date" class="block-input__date inner__i-date datepicker" id="date-issued" required>
+					<div class="block-box">
+						<div class="block-input">
+							<label class="block-input__title inner__i-title" for="name-license">Номер лицензии</label>
+							<input type="text" class="block-input__form inner__i-form" id="name-license" placeholder="000000000000000" pattern="[0-9]{15}" maxlength="15" required>
+						</div>
+						<div class="block-input ml-16">
+							<label class="block-input__title inner__i-title" for="issued-license">Кем выдана</label>
+							<input type="text" class="block-input__form inner__i-form" id="issued-license" placeholder="Организация, выдавшая лицензию" required>
+						</div>
 					</div>
-					<div class="block-input ml-16">
-						<label class="block-input__title inner__i-title" for="validity">Срок действия</label>
-						<input type="date" class="block-input__date inner__i-date datepicker" id="validity" required>
+					<div class="block-box">
+						<div class="block-input">
+							<label class="block-input__title inner__i-title" for="date-issued">Дата выдачи</label>
+							<input type="date" class="block-input__date inner__i-date datepicker" id="date-issued" required>
+						</div>
+						<div class="block-input ml-16">
+							<label class="block-input__title inner__i-title" for="validity">Срок действия</label>
+							<input type="date" class="block-input__date inner__i-date datepicker" id="validity" required>
+						</div>
 					</div>
-				</div>
-				<div class="block-input block-checkbox block-align mt-10">
-					<input class="block-checkbox__input" type="checkbox" name="license-perpetual" id="license-perpetual">
-					<label class="block-checkbox__label" for="license-perpetual">Бессрочная лицензия</label>
-				</div>
-				<div class="block-input mt-14">
-					<label class="block-input__title inner__i-title" for="list-species">Перечень видов лицензируемой деятельности</label>
-					<input type="text" class="block-input__form-full inner__i-form" id="list-species" placeholder="Перечислите виды деятельности, подлежащие лицензированию" required>
+					<div class="block-input block-checkbox block-align mt-10">
+						<input class="block-checkbox__input" type="checkbox" name="license-perpetual" id="license-perpetual">
+						<label class="block-checkbox__label" for="license-perpetual">Бессрочная лицензия</label>
+					</div>
+					<div class="block-input mt-14">
+						<label class="block-input__title inner__i-title" for="list-species">Перечень видов лицензируемой деятельности</label>
+						<input type="text" class="block-input__form-full inner__i-form" id="list-species" placeholder="Перечислите виды деятельности, подлежащие лицензированию" required>
+					</div>
 				</div>
 			</div>
 			<div class="form-data-application inner__align">
 				<h5 class="block-operation inner__operation pb-12">Данные о внесении в ЕГРЮЛ/ИП</h5>
 				<label class="tooltip-icon ml-4" data-tooltip="Данные о внесении в ЕГРЮЛ/ИП"></label>
-				<div class="block-box">
+				<div class="block-hide-show">
+					<div class="block-box">
+						<div class="block-input">
+							<label class="block-input__title inner__i-title" for="number-certificate">Номер свидетельства о внесении</label>
+							<input type="text" class="block-input__form inner__i-form" id="number-certificate" placeholder="000000000000000" pattern="[0-9]{15}" maxlength="15" required>
+						</div>
+						<div class="block-input ml-16">
+							<label class="block-input__title inner__i-title" for="entry-date">Дата внесения</label>
+							<input type="date" class="block-input__date inner__i-date datepicker" id="entry-date" required>
+						</div>
+					</div>
 					<div class="block-input">
-						<label class="block-input__title inner__i-title" for="number-certificate">Номер свидетельства о внесении</label>
-						<input type="text" class="block-input__form inner__i-form" id="number-certificate" placeholder="000000000000000" pattern="[0-9]{15}" maxlength="15" required>
+						<label class="block-input__title inner__i-title" for="entry-by">Государственный орган, осуществивший внесение </label>
+						<input type="text" class="block-input__form-full inner__i-form" id="entry-by" placeholder="Наименование государственного органа" required>
 					</div>
-					<div class="block-input ml-16">
-						<label class="block-input__title inner__i-title" for="entry-date">Дата внесения</label>
-						<input type="date" class="block-input__date inner__i-date datepicker" id="entry-date" required>
-					</div>
-				</div>
-				<div class="block-input">
-					<label class="block-input__title inner__i-title" for="entry-by">Государственный орган, осуществивший внесение </label>
-					<input type="text" class="block-input__form-full inner__i-form" id="entry-by" placeholder="Наименование государственного органа" required>
 				</div>
 			</div>
 			<div class="form-data-manager inner__align">
 				<h5 class="block-operation inner__operation pb-12">Данные о руководителе</h5>
 				<label class="tooltip-icon ml-4" data-tooltip="Данные о руководителе"></label>
-				<div class="block-input">
-					<label class="block-input__title inner__i-title" for="manager-fio">Фамилия, имя и отчество</label>
-					<input type="text" class="block-input__form-full inner__i-form" id="manager-fio" placeholder="Иванов Иван Иванович" required>
-				</div>
-				<div class="block-box">
+				<div class="block-hide-show">
 					<div class="block-input">
-						<label class="block-input__title inner__i-title" for="manager-number">Контактный телефон руководителя</label>
-						<input type="text" class="block-input__form inner__i-form" id="manager-number" placeholder="+7 900 000 00 00" pattern="\+79[0-9]{9}|8[0-9]{10}" maxlength="12" required>
+						<label class="block-input__title inner__i-title" for="manager-fio">Фамилия, имя и отчество</label>
+						<input type="text" class="block-input__form-full inner__i-form" id="manager-fio" placeholder="Иванов Иван Иванович" required>
 					</div>
-					<div class="block-input ml-16">
-						<label class="block-input__title inner__i-title" for="manager-email">Контактный e-mail руководителя</label>
-						<input type="email" class="block-input__form inner__i-form" id="manager-email" placeholder="mail@mtsbank.ru" pattern="^([a-z0-9_-]+\.)*[a-z0-9_-]+@[a-z0-9_-]+(\.[a-z0-9_-]+)*\.[a-z]{2,6}$" required>
+					<div class="block-box">
+						<div class="block-input">
+							<label class="block-input__title inner__i-title" for="manager-number">Контактный телефон руководителя</label>
+							<input type="text" class="block-input__form inner__i-form" id="manager-number" placeholder="+7 900 000 00 00" pattern="\+79[0-9]{9}|8[0-9]{10}" maxlength="12" required>
+						</div>
+						<div class="block-input ml-16">
+							<label class="block-input__title inner__i-title" for="manager-email">Контактный e-mail руководителя</label>
+							<input type="email" class="block-input__form inner__i-form" id="manager-email" placeholder="mail@mtsbank.ru" pattern="^([a-z0-9_-]+\.)*[a-z0-9_-]+@[a-z0-9_-]+(\.[a-z0-9_-]+)*\.[a-z]{2,6}$" required>
+						</div>
 					</div>
-				</div>
-				<div class="block-box">
+					<div class="block-box">
+						<div class="block-input">
+							<label class="block-input__title inner__i-title" for="manager-position">Должность</label>
+							<input type="text" class="block-input__form inner__i-form" id="manager-position" placeholder="Укажите занимаемую должность" required>
+						</div>
+						<div class="block-input ml-16">
+							<label class="block-input__title inner__i-title" for="manager-born">Дата рождения</label>
+							<input type="date" class="block-input__date inner__i-date datepicker" id="manager-born" required>
+						</div>
+					</div>
 					<div class="block-input">
-						<label class="block-input__title inner__i-title" for="manager-position">Должность</label>
-						<input type="text" class="block-input__form inner__i-form" id="manager-position" placeholder="Укажите занимаемую должность" required>
+						<label class="block-input__title inner__i-title" for="place-birth">Место рождения</label>
+						<input type="text" class="block-input__form-full inner__i-form" id="place-birth" placeholder="Как в документе, удостоверяющем личность" required>
 					</div>
-					<div class="block-input ml-16">
-						<label class="block-input__title inner__i-title" for="manager-born">Дата рождения</label>
-						<input type="date" class="block-input__date inner__i-date datepicker" id="manager-born" required>
+					<label class="block-input__title inner__i-title">Гражданство РФ</label>
+					<div class="block-input">
+						<input type="radio" class="block-input__form" name="citizenship" id="yes">
+						<label class="block-radio__label inner__i-title" for="yes">Да</label>
+						<input type="radio" class="block-input__form" name="citizenship" id="no" checked>
+						<label class="block-radio__label inner__i-title ml-18p" for="no">Нет</label>
 					</div>
-				</div>
-				<div class="block-input">
-					<label class="block-input__title inner__i-title" for="place-birth">Место рождения</label>
-					<input type="text" class="block-input__form-full inner__i-form" id="place-birth" placeholder="Как в документе, удостоверяющем личность" required>
-				</div>
-				<label class="block-input__title inner__i-title">Гражданство РФ</label>
-				<div class="block-input">
-					<input type="radio" class="block-input__form" name="citizenship" id="yes">
-					<label class="block-radio__label inner__i-title" for="yes">Да</label>
-					<input type="radio" class="block-input__form" name="citizenship" id="no" checked>
-					<label class="block-radio__label inner__i-title ml-18p" for="no">Нет</label>
-				</div>
-				<label class="block-input__title inner__i-title" for="citizenship-country">Страна гражданства</label>
-				<div class="block-input block-select">
-					<select name="citizenship-country" class="block-input__form-full block-select__form inner__i-form" id="citizenship-country" required>
-						<option value="">Выберите страну</option>
-						<option value="Россия">Россия</option>
-						<option value="США">США</option>
-						<option value="Беларусь">Беларусь</option>
-					</select>
+					<label class="block-input__title inner__i-title" for="citizenship-country">Страна гражданства</label>
+					<div class="block-input block-select">
+						<select name="citizenship-country" class="block-input__form-full block-select__form inner__i-form" id="citizenship-country" required>
+							<option value="">Выберите страну</option>
+							<option value="Россия">Россия</option>
+							<option value="США">США</option>
+							<option value="Беларусь">Беларусь</option>
+						</select>
+					</div>
 				</div>	
 			</div>
 			<div class="form-passport inner__align">
 				<h5 class="block-operation inner__operation pb-12">Документ, удостоверяющий личность</h5>
-				<div class="block-box">
-					<div class="block-input sans">
-						<label class="block-input__title inner__i-title sans__inter" for="passport-series">Серия</label>
-						<input type="text" class="block-input__half inner__i-half sans__inter_norm" id="passport-series" placeholder="0000" pattern="[0-9]{4}" maxlength="4" required>
+				<div class="block-hide-show">
+					<div class="block-box">
+						<div class="block-input sans">
+							<label class="block-input__title inner__i-title sans__inter" for="passport-series">Серия</label>
+							<input type="text" class="block-input__half inner__i-half sans__inter_norm" id="passport-series" placeholder="0000" pattern="[0-9]{4}" maxlength="4" required>
+						</div>
+						<div class="block-input ml-16">
+							<label class="block-input__title inner__i-title sans__inter" for="passport-number">Номер</label>
+							<input type="text" class="block-input__half inner__i-half sans__inter_norm" id="passport-number" placeholder="000000" pattern="[0-9]{6}" maxlength="6" required>
+						</div>
+						<div class="block-input ml-16">
+							<label class="block-input__title inner__i-title" for="passport-date-issued">Дата выдачи</label>
+							<input type="date" class="block-input__half inner__i-date datepicker" id="passport-date-issued" required>
+						</div>
 					</div>
-					<div class="block-input ml-16">
-						<label class="block-input__title inner__i-title sans__inter" for="passport-number">Номер</label>
-						<input type="text" class="block-input__half inner__i-half sans__inter_norm" id="passport-number" placeholder="000000" pattern="[0-9]{6}" maxlength="6" required>
+					<div class="block-input">
+						<label class="block-input__title inner__i-title sans__inter" for="passport-issued-by">Кем выдан</label>
+						<input type="text" class="block-input__form-full inner__i-form" id="passport-issued-by" placeholder="Как в документе, удостоверяющем личность" required>
 					</div>
-					<div class="block-input ml-16">
-						<label class="block-input__title inner__i-title" for="passport-date-issued">Дата выдачи</label>
-						<input type="date" class="block-input__half inner__i-date datepicker" id="passport-date-issued" required>
-					</div>
-				</div>
-				<div class="block-input">
-					<label class="block-input__title inner__i-title sans__inter" for="passport-issued-by">Кем выдан</label>
-					<input type="text" class="block-input__form-full inner__i-form" id="passport-issued-by" placeholder="Как в документе, удостоверяющем личность" required>
 				</div>
 			</div>
 			<div class="form-migration-card inner__align">
 				<h5 class="block-operation inner__operation pb-12">Данные миграционной карты</h5>
-				<div class="block-box">
-					<div class="block-input">
-						<label class="block-input__title inner__i-title sans__inter" for="migration-card-number">Номер</label>
-						<input type="text" class="block-input__form inner__i-form sans__inter_norm" id="migration-card-number" placeholder="000000000" pattern="[0-9]{9}" maxlength="9" required>
+				<div class="block-hide-show">
+					<div class="block-box">
+						<div class="block-input">
+							<label class="block-input__title inner__i-title sans__inter" for="migration-card-number">Номер</label>
+							<input type="text" class="block-input__form inner__i-form sans__inter_norm" id="migration-card-number" placeholder="000000000" pattern="[0-9]{9}" maxlength="9" required>
+						</div>
+						<div class="block-input ml-16">
+							<label class="block-input__title inner__i-title sans__inter" for="migration-card-series">Серия</label>
+							<input type="text" class="block-input__form inner__i-form sans__inter_norm" id="migration-card-series" placeholder="000000000" pattern="[0-9]{9}" maxlength="9" required>
+						</div>
 					</div>
-					<div class="block-input ml-16">
-						<label class="block-input__title inner__i-title sans__inter" for="migration-card-series">Серия</label>
-						<input type="text" class="block-input__form inner__i-form sans__inter_norm" id="migration-card-series" placeholder="000000000" pattern="[0-9]{9}" maxlength="9" required>
-					</div>
-				</div>
-				<div class="block-box">
-					<div class="block-input">
-						<label class="block-input__title inner__i-title" for="migration-start-date">Дата начала пребывания</label>
-						<input type="date" class="block-input__date inner__i-date datepicker" id="migration-start-date" required>
-					</div>
-					<div class="block-input ml-16">
-						<label class="block-input__title inner__i-title" for="migration-end-date">Дата окончания срока пребывания</label>
-						<input type="date" class="block-input__date inner__i-date datepicker" id="migration-end-date" required>
+					<div class="block-box">
+						<div class="block-input">
+							<label class="block-input__title inner__i-title" for="migration-start-date">Дата начала пребывания</label>
+							<input type="date" class="block-input__date inner__i-date datepicker" id="migration-start-date" required>
+						</div>
+						<div class="block-input ml-16">
+							<label class="block-input__title inner__i-title" for="migration-end-date">Дата окончания срока пребывания</label>
+							<input type="date" class="block-input__date inner__i-date datepicker" id="migration-end-date" required>
+						</div>
 					</div>
 				</div>
 			</div>
 			<div class="form-visa-card inner__align">
 				<h5 class="block-operation inner__operation pb-12">Данные визы/разрешения на временное пребывание/вида на жительство</h5>
-				<div class="block-box">
-					<div class="block-input">
-						<label class="block-input__title inner__i-title sans__inter" for="visa-card-number">Номер</label>
-						<input type="text" class="block-input__form inner__i-form sans__inter_norm" id="visa-card-number" placeholder="000000000" pattern="[0-9]{9}" maxlength="9" required>
+				<div class="block-hide-show">
+					<div class="block-box">
+						<div class="block-input">
+							<label class="block-input__title inner__i-title sans__inter" for="visa-card-number">Номер</label>
+							<input type="text" class="block-input__form inner__i-form sans__inter_norm" id="visa-card-number" placeholder="000000000" pattern="[0-9]{9}" maxlength="9" required>
+						</div>
+						<div class="block-input ml-16">
+							<label class="block-input__title inner__i-title sans__inter" for="visa-card-series">Серия</label>
+							<input type="text" class="block-input__form inner__i-form sans__inter_norm" id="visa-card-series" placeholder="000000000" pattern="[0-9]{9}" maxlength="9" required>
+						</div>
 					</div>
-					<div class="block-input ml-16">
-						<label class="block-input__title inner__i-title sans__inter" for="visa-card-series">Серия</label>
-						<input type="text" class="block-input__form inner__i-form sans__inter_norm" id="visa-card-series" placeholder="000000000" pattern="[0-9]{9}" maxlength="9" required>
-					</div>
-				</div>
-				<div class="block-box">
-					<div class="block-input">
-						<label class="block-input__title inner__i-title" for="visa-start-date">Дата начала пребывания</label>
-						<input type="date" class="block-input__date inner__i-date datepicker" id="visa-start-date" required>
-					</div>
-					<div class="block-input ml-16">
-						<label class="block-input__title inner__i-title" for="visa-end-date">Дата окончания срока пребывания</label>
-						<input type="date" class="block-input__date inner__i-date datepicker" id="visa-end-date" required>
+					<div class="block-box">
+						<div class="block-input">
+							<label class="block-input__title inner__i-title" for="visa-start-date">Дата начала пребывания</label>
+							<input type="date" class="block-input__date inner__i-date datepicker" id="visa-start-date" required>
+						</div>
+						<div class="block-input ml-16">
+							<label class="block-input__title inner__i-title" for="visa-end-date">Дата окончания срока пребывания</label>
+							<input type="date" class="block-input__date inner__i-date datepicker" id="visa-end-date" required>
+						</div>
 					</div>
 				</div>
 			</div>
 			<div class="form-public-executive inner__align">
 				<h5 class="block-operation inner__operation pb-12">Являетесь ли вы публичным должностным или иностранным публичным должностным лицом?</h5>
-				<div class="block-input">
-					<input type="radio" class="block-input__form" name="public-executive" id="yes-public">
-					<label class="block-radio__label inner__i-title" for="yes-public">Да</label>
-					<input type="radio" class="block-input__form" name="public-executive" id="no-public" checked>
-					<label class="block-radio__label inner__i-title ml-18p" for="no-public">Нет</label>
+				<div class="block-hide-show">
+					<div class="block-input">
+						<input type="radio" class="block-input__form" name="public-executive" id="yes-public">
+						<label class="block-radio__label inner__i-title" for="yes-public">Да</label>
+						<input type="radio" class="block-input__form" name="public-executive" id="no-public" checked>
+						<label class="block-radio__label inner__i-title ml-18p" for="no-public">Нет</label>
+					</div>
 				</div>
 			</div>
 			<div class="block-submit inner__align mb-120 mt-40"><input type="submit" class="block-submit__input" value="Далее"></div>
@@ -269,6 +291,6 @@
     if(/MSIE \d|Trident.*rv:/.test(navigator.userAgent))
         $( ".datepicker" ).datepicker({dateFormat: "dd.mm.yy"});
 	</script>
-	<!-- <script src='js/cmd.js'></script> -->
+	<script src='js/cmd.js'></script>
 </body>
 </html>
