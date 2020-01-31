@@ -31,6 +31,7 @@
 	line-height: 40px;
 	letter-spacing: -0.5px;
 	font-family: "MTS Sans Bold";
+	color: #202d3d;
 }
 .block-filling__progress{
 	display: -webkit-flex;
@@ -193,6 +194,7 @@ input[type="radio"]:not(:checked) + label:before {
     position: absolute;
     left: 0px;
     top: 0px;
+    transform: translate(0, 9px);
     width: 28px;
     height: 28px;
     border: 2px solid #bbc1c7;
@@ -247,7 +249,7 @@ input[type="checkbox"]:not(:checked) + label:after {
 input[type="radio"]:checked + label:after, 
 input[type="radio"]:not(:checked) + label:after {
     left: 8px;
-    top: 8px;
+    top: 17px;
     transform: translate(50%, 50%);
     width: 8px;
     height: 8px;
@@ -309,7 +311,6 @@ input[type="radio"]:checked + label:after {
 }
 .tooltip-icon{
 	display: inline-flex;
-	align-items: center;
 	background-image: url(../img/icons/tooltip-icon.png);
 	width: 16px;
 	height: 16px;
@@ -367,6 +368,9 @@ input[type="radio"]:checked + label:after {
 .mt-23{
 	margin-top: 23px;
 }
+.mt-40{
+	margin-top: 40px;
+}
 .ml-16{
 	margin-left: 16px;
 }
@@ -385,8 +389,8 @@ input[type="radio"]:checked + label:after {
 .pl-50{
 	padding-left: 50px;
 }
-.ml-160{
-	margin-left: 160px;
+.ml-18p{
+	margin-left: 18%;
 }
 .mb-120{
 	margin-bottom: 120px;
@@ -412,6 +416,9 @@ input[type="radio"]:checked + label:after {
     }
     .ml-16{
 		margin: 0;
+	}
+	.inner__align{
+		padding: 0 5%;
 	}
 }
 @media screen and (min-width: 768px) and (max-width: 1023px) {
