@@ -418,6 +418,9 @@ input[type="radio"]:checked + label:after {
     .block-operation{
 		cursor: pointer;
     }
+    .inner__align{
+		padding: 0 5%;
+	}
     .ml-16{
 		margin: 0;
 	}
