@@ -4,9 +4,10 @@ let wrongQuestion = 0;//неправильные ответы
 let status;
 let rightAnswer = document.querySelector('.rightAnswers');
 let wrongAnswer = document.querySelector('.wrongAnswers');
+let progressBox = document.querySelector('.progress-box');
 let trueValue;//верное значение
 let percnt = document.getElementById('perc');
-var progress = document.getElementById('progress'),
+let progress = document.getElementById('progress'),
     percent = document.getElementById('percent');
 //Рассчет числа
 function mainCalculate(a, b){
@@ -116,17 +117,21 @@ function backToOrigCol(){
   rightAnswer.className = 'rightAnswers';
 }
 function changeProgress() {
+  
     if (progress.value >= progress.max) {
         notTouch();
         return;
     }
+
     // partBackTime();
     percnt.textContent = progress.value;
     progress.value++;
     percent.textContent = Math.floor(progress.value / progress.max * 100);
-    setTimeout(changeProgress, 1000);
+    setTimeout(changeProgress, 1000);//1000
+
 }
-changeProgress();
+// progressBox.onclick = changeProgress;//если нужно чтобы работало от кнопки отсчета
+document.getElementsByClassName('list__item')[0].onclick = animationMainMenu;
 function partBackTime(){
   if(status == true && progress.value != 0){
     // percnt.textContent = 20;
@@ -135,8 +140,16 @@ function partBackTime(){
   }
 }
 function notTouch(){
+  // document.getElementsByClassName('home-screen')[0].className = 'home-screen_hide';
   for(let i = 0; i < document.getElementsByClassName('itm').length; i+1){
-    document.getElementsByClassName('itm')[i].className = 'itm_close'; 
+    document.getElementsByClassName('itm')[i].className = 'itm_close';
   }
+  document.getElementsByClassName('rightAnswers')[0].className = 'rightAnswers_close';
+  document.getElementsByClassName('wrongAnswers')[0].className = 'wrongAnswers_close';
 }
+function animationMainMenu(){
+  document.getElementsByClassName('home-screen')[0].className = 'home-screen_hide';
+  changeProgress();
+}
+
 

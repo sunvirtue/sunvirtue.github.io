@@ -11,18 +11,28 @@
 </head>
 <body>
   <div class="container">
-    <div class="box">
-      <div class="rightAnswers">Правильно: <span>0</span></div>
-      <div class="wrongAnswers">Не правильно: <span>0</span></div>
+    <div class="home-screen game">
+      <ul class="list">
+        <li class="list__item"><a class="game__start">Начать игру</a></li>
+        <li class="list__item"><a class="game__start" href="#">Статистика</a></li>
+      </ul>
+      
     </div>
-    <div class="field"></div>
-    <div class="box">
-      <div>Сколько будет: <p class="calcNum"></p></div>
-      <div class="progress-box">
-        <progress id="progress" value="0" max="60">Загружено <span id="percent">0</span>%</progress>
-        <p id="perc"></p>
+    <div class="start-game">
+      <div class="box">
+        <div class="rightAnswers">Правильно: <span>0</span></div>
+        <div class="wrongAnswers">Не правильно: <span>0</span></div>
+      </div>
+      <div class="field"></div>
+      <div class="box">
+        <div>Сколько будет: <p class="calcNum"></p></div>
+        <div class="progress-box">
+          <progress class="progress" id="progress" value="0" max="60">Загружено <span id="percent">0</span>%</progress>
+          <p id="perc"></p>
+        </div>
       </div>
     </div>
+    <div class="last-screen"></div>
   </div>
   <script src="js/game.js"></script>
 </body>

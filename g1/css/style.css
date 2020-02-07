@@ -5,6 +5,73 @@
 .container{
   display: flex;
   justify-content: center;
+  width: 720px;
+  margin: 0 auto;
+  overflow: hidden;
+  position: relative;
+}
+.home-screen, .start-game, .last-screen{
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	position: relative;
+	transition: .2s ease-out;
+}
+.home-screen{
+	position: absolute;
+	left: 40px;
+	width: 640px;
+	height: 360px;
+	background-color: #00bfff;
+	z-index: 1;
+}
+.home-screen_hide{
+	position: absolute;
+	width: 640px;
+	height: 360px;
+	animation: hideMenu 200ms;
+	z-index: 0;
+}
+.list{
+	box-sizing: border-box;
+}
+.list__item{
+	list-style: none;
+	cursor: pointer;
+	box-sizing: border-box;
+	transition: .2s ease-out;
+}
+.list__item:hover{
+	box-sizing: border-box;
+	transition: .2s ease-out;
+	/*border-bottom: 2px solid #fff;*/
+	margin-bottom: -2px;
+	transform: scale(1.5);
+}
+.calcNum{
+	/*color: #fff;*/
+	/*font-family: 'Bangers', cursive;*/
+}
+.game{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.game__start{
+	color: #fff;
+	font-size: 32px;
+	text-decoration: none;
+}
+.start-game{
+	position: relative;
+	width: 640px;
+	/*height: 360px;*/
+	flex-wrap: wrap;
+	z-index: 0;
+	/* animation: hideMenu 500ms; */
+	background-color: #fff;
 }
 .rightAnswers, .wrongAnswers{
   width: 120px;
@@ -14,10 +81,21 @@
   transition: 500ms ease-out;
   font-family: 'Bangers', cursive;
 }
+.rightAnswers_close, .wrongAnswers_close{
+	background-color: gray;
+	width: 120px;
+  	padding: 20px;
+  	height: 20px;
+	transition: 500ms ease-out;
+	color: #fff;
+	font-family: 'Bangers', cursive;
+}
 @media screen and (min-width: 240px) and (max-width: 768px){
   .container{
     flex-direction: column;
     flex-wrap: wrap;
+    align-items: center;
+    width: 360px;
   }
   .box{
     display: flex;
@@ -30,6 +108,11 @@
   }
   .rightAnswers, .wrongAnswers{
     border: 1px solid black;
+  }
+  .home-screen{
+  	width: 360px;
+	height: 550px;
+	left: 0;
   }
   #perc{
     right: 0;
@@ -130,6 +213,12 @@
     transform: scale(1.5);
   }
 }
+@keyframes hideMenu{
+  99% {
+    /*transform: translate(-720px, 0);*/
+    /*width:920px;*/
+  }
+}
 ::-webkit-progress-bar {
     background: #D2973D;
 }
@@ -144,6 +233,7 @@
   width: 120px;
   height: 120px;
   position: relative;
+  cursor: pointer;
 }
 #progress{
   display: block;
