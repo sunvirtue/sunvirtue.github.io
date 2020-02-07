@@ -111,11 +111,11 @@
   }
   .home-screen{
   	width: 360px;
-	height: 100vh;
+	height: 80vh;
 	left: 0;
   }
   .start-game{
-  	height: 100vh;
+  	height: 80vh;
   }
   #perc{
     right: 0;
