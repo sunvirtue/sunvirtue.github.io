@@ -5,18 +5,76 @@ let status;
 let rightAnswer = document.querySelector('.rightAnswers');
 let wrongAnswer = document.querySelector('.wrongAnswers');
 let progressBox = document.querySelector('.progress-box');
+let mode = document.getElementsByClassName('mode');
+let arrayMode = [modePlus, modeMinus, modeMultiplication, modeDivision];
+let calc = document.querySelector('.calcNum');
 let trueValue;//верное значение
 let percnt = document.getElementById('perc');
 let progress = document.getElementById('progress'),
     percent = document.getElementById('percent');
 //Рассчет числа
-function mainCalculate(a, b){
-  let calc = document.querySelector('.calcNum');
+function mainCalculate(){
+  arrayMode[Math.floor(Math.random()*4)]();
+  // modeDivision();
+}
+
+//beta version
+// mode[0].onclick = modeGame;
+
+// function modeGame(e){
+//   console.log(e.target.className);
+
+//     if(e.target.className == 'game__start mode__plus'){
+//      modePlus();
+//     }
+//     if(e.target.className == 'game__start mode__minus'){
+//      modeMinus();
+//     }
+//     if(e.target.className == 'game__start mode__multi'){
+//      modeMultiplication();
+//     }
+//     if(e.target.className == 'game__start mode__division'){
+//      modeDivision();
+//     }
+
+// }
+// modeGame();
+//Режимы игры
+function modePlus(a, b){
   a = Math.random()*20;//20
   b = Math.random()*20;//20
   calc.textContent = Math.floor(a) +' + '+ Math.floor(b)+'?';
   trueValue = Math.floor(a) + Math.floor(b);
+}
+function modeMinus(a, b){
+  a = Math.random()*20;//20
+  b = Math.random()*20;//20
+  if(a < b){
+    calc.textContent = Math.floor(b) +' - '+ Math.floor(a)+'?';
+    trueValue = Math.floor(b) - Math.floor(a);
+  }
+  else{
+    calc.textContent = Math.floor(a) +' - '+ Math.floor(b)+'?';
+    trueValue = Math.floor(a) - Math.floor(b);
+  }
   
+
+}
+function modeMultiplication(a, b){
+  a = Math.random()*20;//20
+  b = Math.random()*20;//20
+  calc.textContent = Math.floor(a) +' * '+ Math.floor(b)+'?';
+  trueValue = Math.floor(a) * Math.floor(b);
+}
+function modeDivision(a, b){
+  a = Math.random()*20;//20
+  b = Math.random(1)*20;//20
+  
+  if((Math.floor(a) / Math.floor(b) ^ 0) === Math.floor(a) / Math.floor(b)){
+    calc.textContent = Math.floor(a) +' : '+ Math.floor(b/2)+'?';
+    trueValue = Math.floor(a) / Math.floor(b/2);
+    return trueValue;
+  }
 }
 
 //Создание ячеек поля

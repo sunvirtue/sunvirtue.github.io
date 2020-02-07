@@ -36,6 +36,8 @@
 }
 .list{
 	box-sizing: border-box;
+	color: #fff;
+	font-size: 32px;
 }
 .list__item{
 	list-style: none;
@@ -49,6 +51,20 @@
 	/*border-bottom: 2px solid #fff;*/
 	margin-bottom: -2px;
 	transform: scale(1.5);
+}
+.list .list__item + .list{
+	display: none;
+}
+.list .list__item + .list .list__item{
+	display: none;
+	position: relative;
+	transition: .2s ease-out;
+}
+.list .list__item + .list:focus .list__item,
+.list .list__item + .list:hover .list__item{
+	display: block;
+	/*transform: scale(0.7);*/
+	transition: .2s ease-out;
 }
 .calcNum, .question{
 	color: #D2973D;
