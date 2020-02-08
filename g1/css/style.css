@@ -2,6 +2,28 @@
   margin: 0;
   padding: 0;
 }
+/*table{
+	display: block;
+	width: 100vw;
+}*/
+.show__table{
+	width: 100vw;
+	animation: expansion 500ms;
+}
+.hide__table{
+	display: none;
+}
+caption{
+	color: #fff;
+    font-size: 24px;
+    font-weight: 600;
+}
+td, th{
+	font-weight: 100;
+	text-align: center;
+	color: #fff;
+    font-size: 24px;
+}
 .container{
   display: flex;
   justify-content: center;
@@ -21,6 +43,7 @@
 }
 .home-screen{
 	position: absolute;
+	flex-wrap: wrap;
 	left: 40px;
 	width: 640px;
 	height: 360px;
@@ -29,7 +52,9 @@
 }
 .home-screen_hide{
 	position: absolute;
+	flex-wrap: wrap;
 	width: 640px;
+	left: 40px;
 	height: 360px;
 	animation: hideMenu 200ms;
 	z-index: 0;
@@ -75,7 +100,7 @@
 .game{
 	display: flex;
 	justify-content: center;
-	align-items: center;
+	align-content: center;
 }
 .game__start{
 	color: #fff;
@@ -108,7 +133,13 @@
 	color: #fff;
 	font-family: 'Bangers', cursive;
 }
+.mb-40{
+	margin-bottom: 40px;
+}
 @media screen and (min-width: 240px) and (max-width: 768px){
+	td, th{
+		font-size: 18px;
+	}
   .container{
     flex-direction: column;
     flex-wrap: wrap;
@@ -116,6 +147,7 @@
     width: 360px;
   }
   .box{
+  	position: relative;
     display: flex;
     justify-content: space-between;
     width: 360px;
@@ -211,7 +243,7 @@
 .itm_hint{
   width: 60px;
   height: 60px;
-  background-color: #D2973D;/*blue*/
+  background-color: #D2973D;/*#00bfff*/
   transition: 200ms;
 }
 .itm_true{
