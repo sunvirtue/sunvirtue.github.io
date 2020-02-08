@@ -82,6 +82,7 @@ function modeDivision(a, b){
 
 function newGame(){
   total = rightQuestion = wrongQuestion = 0;
+  rightAnswer.children[0].textContent = wrongAnswer.children[0].textContent = 0;
 touch();
 newRun();
 }
@@ -201,7 +202,7 @@ newRun();
       percnt.textContent = progress.value;
       progress.value++;
       percent.textContent = Math.floor(progress.value / progress.max * 100);
-      setTimeout(changeProgress, 1000);//1000
+      setTimeout(changeProgress, 100);//1000
 
   }
   // progressBox.onclick = changeProgress;//если нужно чтобы работало от кнопки отсчета
