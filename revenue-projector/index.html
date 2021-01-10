@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Revenue Projector</title>
+	<link rel="stylesheet" href="css/rev-projector.css">
+</head>
+<body>
+	<div class="calc">
+		<div class="calc__box">
+			<label for="#monthly-transactions" class="calc__label-field"># of monthly transactions</label>
+			<input type="number" class="calc__input-field" id="monthly-transactions" oninput="isCalculateRevenue()" min="0" value="1000">
+		</div>
+
+		<div class="calc__box">
+			<label for="#average-sale-amount" class="calc__label-field">Average sale $ amount</label>
+			<input type="number" class="calc__input-field" id="average-sale-amount" oninput="isCalculateRevenue()" min="0" value="100">
+		</div>
+
+		<div class="calc__box">
+			<label for="#rev-share" class="calc__label-field">Rev share % enter .4% as .4</label>
+			<input type="number" class="calc__input-field" id="rev-share" oninput="isCalculateRevenue()" min="0" value="0.40">
+		</div>
+
+		<div class="calc__box">
+			<label for="#monthly-potential-revenue" class="calc__label-field">Monthly potential revenue</label>
+			<input type="number" class="calc__input-field readonly" id="monthly-potential-revenue" readonly>
+		</div>
+	</div>
+	<script src="js/rev-projector.js"></script>
+</body>
+</html>

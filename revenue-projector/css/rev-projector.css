@@ -1,0 +1,38 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+.calc {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	justify-content: space-evenly;
+	margin: 0 1%;
+}
+.calc__box {
+	width: 250px;
+}
+.calc__label-field,
+.calc__input-field {
+	font-size: 20px;
+	text-align: left;
+}
+.calc__input-field {}
+.readonly {
+	cursor: not-allowed;
+}
+
+@media (max-width: 1200px){
+	.calc {
+		width: 500px;
+		margin: 0 auto;
+	}
+}
+
+@media (max-width: 768px){
+	.calc {
+		width: 250px;
+		margin: 0 auto;
+	}
+}
