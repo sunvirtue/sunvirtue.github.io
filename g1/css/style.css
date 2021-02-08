@@ -7,7 +7,7 @@
 	width: 100vw;
 }*/
 .show__table{
-	width: 100vw;
+	width: inherit;
 	animation: expansion 500ms;
 }
 .hide__table{
@@ -145,6 +145,7 @@ td, th{
     flex-wrap: wrap;
     align-items: center;
     width: 360px;
+    height: 100vh;
   }
   .box{
   	position: relative;
@@ -160,13 +161,13 @@ td, th{
     border: 1px solid black;
   }
   .home-screen{
-  	width: 360px;
-	height: 80vh;
-	left: 0;
+  	 width: 360px;
+	   left: 0;
+     height: 100vh;
   }
   .start-game{
   	flex-wrap: wrap;
-  	height: 80vh;
+  	height: 100vh;
   }
   #perc{
     right: 0;
