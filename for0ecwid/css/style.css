@@ -125,4 +125,7 @@ form .input__field:nth-child(4) {
 	.input__field {
 		height: 45px;
 	}
+	.input__btn {
+		height: 45px;
+	}
 }
