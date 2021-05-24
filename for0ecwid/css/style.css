@@ -34,6 +34,8 @@
 }
 form .input__field:nth-child(4) {
 	width: 80%;
+	display: flex;
+	align-self: center;
 }
 .input__btn {
 	display: block;
