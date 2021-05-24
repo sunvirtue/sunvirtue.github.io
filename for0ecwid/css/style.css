@@ -35,8 +35,8 @@
 }
 form .input__field:nth-child(4) {
 	width: 80%;
-	padding-top: 5px;
-    padding-bottom: 5px;
+	/*padding-top: 5px;*/
+    /*padding-bottom: 5px;*/
 }
 .input__btn {
 	display: block;
