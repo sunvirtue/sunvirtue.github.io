@@ -15,7 +15,7 @@
 				<input type="text" placeholder="Ваше имя:" pattern="[A-Za-zА-Яа-яЁё]{3,}" class="input__field username plr-20" required onchange="replenishmentRange()">
 				<input type="text" placeholder="Ваш эмейл:" pattern="^((([0-9A-Za-z]{1}[-0-9A-z\.]{0,30}[0-9A-Za-z]?)|([0-9А-Яа-я]{1}[-0-9А-я\.]{0,30}[0-9А-Яа-я]?))@([-A-Za-z]{1,}\.){1,}[-A-Za-z]{2,})$" class="input__field email plr-20" required onchange="replenishmentRange()">
 				<input type="text" placeholder="Ваш телефон:" pattern="^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$" class="input__field phone plr-20" required onchange="replenishmentRange()">
-				<input type="date" class="input__field born plr-20" required onchange="replenishmentRange()">
+				<input name="born" placeholder="Дата рождения:" type="text" onfocus="(this.type=`date`)" onblur="(this.type=`text`)" id="date"  class="input__field born plr-20" required onchange="replenishmentRange()">
 				<textarea name="question" placeholder="Напишите что-нибудь, а то нам очень скучно...:(" id="" cols="40" rows="10" class="textarea__field question p-10" required onchange="replenishmentRange()"></textarea>
 				<input type="submit" class="input__btn send plr-20" value="Отправить">
 			</div>
