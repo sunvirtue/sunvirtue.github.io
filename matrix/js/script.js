@@ -77,7 +77,7 @@ ball.onpointerdown = function(e) {
 
 }
 
-ball.onpointermove = function() {
+limit.onpointermove = function() {
   return false;
 };
 
