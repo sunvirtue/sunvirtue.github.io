@@ -22,7 +22,7 @@ var limit7 = document.getElementsByClassName("mat__col")[6];
 var limit8 = document.getElementsByClassName("mat__col")[7];
 var limit9 = document.getElementsByClassName("mat__col")[8];
 // var coords;
-ball.onmousedown = function(e) {
+ball.onpointerdown = function(e) {
 
   var coords = getCoords(ball);
   var shiftX = e.pageX - coords.left;
@@ -56,7 +56,7 @@ ball.onmousedown = function(e) {
     }
   }
 
-  limit.onmousemove = function(e) {
+  limit.onpointermove = function(e) {
     moveAt(e);
     console.log(coords);
     // isLimit(e);
@@ -64,14 +64,14 @@ ball.onmousedown = function(e) {
 
   
 
-  ball.onmousemove = function() {
+  ball.onpointermove = function() {
 	console.log(coords);
 	document.querySelector('#offS').innerHTML = coords.top + ' '+coords.left;
 
-  ball.onmouseup = function() {
-    limit.onmousemove = null;
-    ball.onmousemove = null;
-    ball.onmouseup = null;
+  ball.onpointerup = function() {
+    limit.onpointermove = null;
+    ball.onpointermove = null;
+    ball.onpointerup = null;
   };
 };
 
@@ -95,7 +95,7 @@ function isLimit(e){
 	}
 }
 
-limit.onmousemove = function(event){
+limit.onpointermove = function(event){
   event = event || window.event;
   
   document.querySelector('#offx').innerHTML = event.offsetX;
