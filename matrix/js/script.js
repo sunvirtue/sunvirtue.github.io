@@ -67,13 +67,13 @@ ball.onpointerdown = function(e) {
   ball.onpointermove = function() {
 	console.log(coords);
 	document.querySelector('#offS').innerHTML = coords.top + ' '+coords.left;
-
+};
   ball.onpointerup = function() {
     limit.onpointermove = null;
     ball.onpointermove = null;
     ball.onpointerup = null;
   };
-};
+// };
 
 }
 
@@ -150,13 +150,13 @@ ball2.onpointerdown = function(e) {
   ball2.onpointermove = function() {
 	console.log(coords);
 	document.querySelector('#offS').innerHTML = coords.top + ' '+coords.left;
-
+};
   ball2.onpointerup = function() {
     limit2.onpointermove = null;
     ball2.onpointermove = null;
     ball2.onpointerup = null;
   };
-};
+// };
 
 }
 
