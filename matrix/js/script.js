@@ -105,7 +105,7 @@ limit.onpointermove = function(event){
 
 
 
-ball2.onmousedown = function(e) {
+ball2.onpointerdown = function(e) {
 
   var coords = getCoords(ball2);
   var shiftX = e.pageX - coords.left;
@@ -139,7 +139,7 @@ ball2.onmousedown = function(e) {
     }
   }
 
-  limit2.onmousemove = function(e) {
+  limit2.onpointermove = function(e) {
     moveAt(e);
     console.log(coords);
     // isLimit(e);
@@ -147,14 +147,14 @@ ball2.onmousedown = function(e) {
 
   
 
-  ball2.onmousemove = function() {
+  ball2.onpointermove = function() {
 	console.log(coords);
 	document.querySelector('#offS').innerHTML = coords.top + ' '+coords.left;
 
-  ball2.onmouseup = function() {
-    limit2.onmousemove = null;
-    ball2.onmousemove = null;
-    ball2.onmouseup = null;
+  ball2.onpointerup = function() {
+    limit2.onpointermove = null;
+    ball2.onpointermove = null;
+    ball2.onpointerup = null;
   };
 };
 
@@ -178,7 +178,7 @@ function isLimit(e){
 	}
 }
 
-limit2.onmousemove = function(event){
+limit2.onpointermove = function(event){
   event = event || window.event;
   
   document.querySelector('#offx').innerHTML = event.offsetX;
