@@ -77,7 +77,7 @@ ball.onpointerdown = function(e) {
 
 }
 
-ball.ondragstart = function() {
+ball.onpointermove = function() {
   return false;
 };
 
