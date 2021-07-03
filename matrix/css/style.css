@@ -25,7 +25,7 @@
 .mat__dot{
 	border: 2px solid yellow;
 	border-radius: 50px;
-	width: 20px;
-	height: 20px;
+	width: 40px;
+	height: 40px;
 	cursor: move;
 }
