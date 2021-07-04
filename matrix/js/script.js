@@ -8,16 +8,16 @@ function isZeroingClasses(){
 
 
 function downTouch(e){
-	isZeroingClasses();
+	// isZeroingClasses();
 	if(e.target.className == 'mat__col'){
 		e.target.className = 'mat__col_sel';
 	}
 }
 
-// function upTouch(){
-// 	isZeroingClasses();
+function upTouch(){
+	isZeroingClasses();
 
-// }
+}
 
 rowa.onpointerdown = downTouch;
-// rowa.onpointerup = upToch;
+rowa.onpointerup = upToch;
