@@ -14,10 +14,10 @@ function downTouch(e){
 	}
 }
 
-function upTouch(e){
+function upTouch(){
 	isZeroingClasses();
 	document.querySelector('.pressed').textContent = 'нажат';
 }
 
 rowa.onpointerdown = downTouch;
-rowa.onpointermove = upToch;
+rowa.onpointermove = upTouch;
