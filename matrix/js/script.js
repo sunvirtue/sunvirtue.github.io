@@ -14,10 +14,10 @@ function downTouch(e){
 	}
 }
 
-function upTouch(){
-	isZeroingClasses();
+// function upTouch(){
+// 	isZeroingClasses();
 
-}
+// }
 
 rowa.onpointerdown = downTouch;
-rowa.onpointerup = upToch;
+// rowa.onpointerup = upToch;
