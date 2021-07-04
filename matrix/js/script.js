@@ -16,7 +16,7 @@ function downTouch(e){
 
 function upTouch(){
 	isZeroingClasses();
-	document.querySelector('.pressed').textContent = 'нажат';
+	document.querySelector('#pressed').textContent = 'нажат';
 }
 
 rowa.onpointerdown = downTouch;
