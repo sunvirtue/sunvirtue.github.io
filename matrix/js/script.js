@@ -12,6 +12,7 @@ function downTouch(e){
 	if(e.target.className == 'mat__col'){
 		e.target.className = 'mat__col_sel';
 	}
+	document.querySelector('#pressed').textContent = 'нажат';
 }
 
 function upTouch(){
