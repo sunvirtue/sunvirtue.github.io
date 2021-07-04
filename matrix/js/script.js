@@ -14,7 +14,7 @@ function downTouch(e){
 	}
 }
 
-function upTouch(){
+function upTouch(e){
 	isZeroingClasses();
 
 }
