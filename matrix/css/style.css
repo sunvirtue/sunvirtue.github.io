@@ -31,10 +31,3 @@
 	border: 2px solid #fac000;
 	background-color: #f200fa;
 }
-.mat__dot{
-	border: 2px solid yellow;
-	border-radius: 50px;
-	width: 40px;
-	height: 40px;
-	cursor: move;
-}

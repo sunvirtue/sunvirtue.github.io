@@ -1,5 +1,7 @@
 let sel = document.getElementsByClassName('mat__col_sel');
-let rowa = document.getElementsByClassName('mat__row')[0];
+let rowa0 = document.getElementsByClassName('mat__row')[0];
+let rowa1 = document.getElementsByClassName('mat__row')[1];
+let rowa2 = document.getElementsByClassName('mat__row')[2];
 function isZeroingClasses(){
 	for(let i = 0; i < sel.length; i++){
 		sel[i].className = 'mat__col';
@@ -20,7 +22,8 @@ function upTouch(){
 	document.querySelector('#pressed').textContent = 'не нажат';
 }
 
-rowa.onpointerdown = downTouch;
-// rowa.onpointermove = upTouch;
-rowa.onpointerup = upTouch;
-// rowa.onpointermove = upTouch;
+rowa0.onpointerdown = downTouch;
+rowa0.onpointerup = upTouch;
+
+rowa1.onpointerdown = downTouch;
+rowa1.onpointerup = upTouch;
