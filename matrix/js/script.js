@@ -23,4 +23,4 @@ function upTouch(){
 rowa.onpointerdown = downTouch;
 // rowa.onpointermove = upTouch;
 rowa.onpointerup = upTouch;
-rowa.onpointermove = upTouch;
+// rowa.onpointermove = upTouch;
