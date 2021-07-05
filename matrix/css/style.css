@@ -6,19 +6,22 @@
 .game{
 	display: flex;
 	justify-content: center;
-	align-items: center;
-	width: 300px;
+	align-items: flex-end;
+	height: 95vh;
+	/*max-width: 800px;*/
 	/*margin: 0 auto;*/
-	background: green;
+	/*background: green;*/
 }
 .mat__row{
 	display: flex;
+	background-color: green;
 }
 .mat__col{
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	width: 100px;
+	max-width: 150px;
+	width: calc(100vw / 3);
 	height: 100px;
 	border: 2px solid #fac000;
 }
@@ -26,7 +29,8 @@
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	width: 100px;
+	max-width: 150px;
+	width: calc(100vw / 3);
 	height: 100px;
 	border: 2px solid #fac000;
 	background-color: #f200fa;
