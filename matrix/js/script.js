@@ -27,3 +27,6 @@ rowa0.onpointerup = upTouch;
 
 rowa1.onpointerdown = downTouch;
 rowa1.onpointerup = upTouch;
+
+rowa2.onpointerdown = downTouch;
+rowa2.onpointerup = upTouch;
