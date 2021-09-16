@@ -60,10 +60,13 @@ function upTouch(){
 }
 
 rowa0.onpointerdown = downTouch;
+rowa0.onpointermove = upTouch;
 rowa0.onpointerup = upTouch;
 
 rowa1.onpointerdown = downTouch;
+rowa1.onpointermove = upTouch;
 rowa1.onpointerup = upTouch;
 
 rowa2.onpointerdown = downTouch;
+rowa2.onpointermove = upTouch;
 rowa2.onpointerup = upTouch;
