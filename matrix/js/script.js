@@ -11,7 +11,6 @@ function isZeroingClasses(){
 function downTouch(e){
 	if(e.target.className == 'mat__col'){
 		e.target.className = 'mat__col_sel';
-		e.target.style.transition = '.2s';
 	}
 }
 
