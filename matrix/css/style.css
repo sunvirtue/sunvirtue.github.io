@@ -4,13 +4,21 @@
 	margin: 0;
 }
 .game{
-	display: flex;
-	justify-content: center;
+	display: block;
+	/*justify-content: center;
 	align-items: flex-end;
-	height: 100vh;
+	height: 100vh;*/
 	/*max-width: 800px;*/
 	/*margin: 0 auto;*/
 	/*background: green;*/
+}
+.game__screen_one{
+	display: flex;
+	justify-content: center;
+}
+.game__field{
+	position: absolute;
+	bottom: 0;
 }
 .mat__row{
 	display: flex;
