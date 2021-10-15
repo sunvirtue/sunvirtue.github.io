@@ -1,6 +1,6 @@
 let sel = document.getElementsByClassName('mat__col_sel');
 let sel2 = document.getElementsByClassName('dis__col_sel');
-let bul = document.getElementsByClassName('bullet_active');
+// let bul = document.getElementsByClassName('bullet_active');
 let rowa0 = document.getElementsByClassName('mat__row')[0];
 let rowa1 = document.getElementsByClassName('mat__row')[1];
 let rowa2 = document.getElementsByClassName('mat__row')[2];
@@ -9,6 +9,12 @@ let disa1 = document.getElementsByClassName('dis__row')[1];
 let disa2 = document.getElementsByClassName('dis__row')[2];
 let lvl = document.querySelector('.level');
 let lvlNext = document.querySelector('.level__next');
+let play = document.querySelector('.play__game');
+let clsBul = document.getElementsByClassName('bullet');
+let needCollect = document.querySelector('.need__collect');
+let arrCollect = ['ghost', 'key'];
+let arrCount = 0;
+let hint = document.querySelector('.game__hint');
 let oneCube = 0;
 let gradCube1 = 90,
 	gradCube2 = 90,
@@ -32,6 +38,7 @@ let userAnswer = [0, 0, 0, 0, 0, 0, 0, 0, 0];
 let sysQuestion = [];
 let allRight = 0;
 let level = 0;
+let count = 0;
 // let prev;
 function isZeroingClasses(){//возврат клавиш управления к дефолтному состоянию
 	for(let i = 0; i < sel.length; i++){
@@ -42,69 +49,64 @@ function isZeroingClasses(){//возврат клавиш управления �
 
 // }
 function level1(){
-	disa0.children[0].children[0].children[0].className = 'bullet_active';
-	disa0.children[0].children[1].children[0].className = 'bullet_active';
-	disa0.children[0].children[1].children[1].className = 'bullet_active';
+	disa0.children[0].children[0].children[0].className = 'bullet bullet_active';
+	disa0.children[0].children[1].children[0].className = 'bullet bullet_active';
+	disa0.children[0].children[1].children[1].className = 'bullet bullet_active';
 
-	disa0.children[1].children[1].children[0].className = 'bullet_active';
-	disa0.children[1].children[1].children[1].className = 'bullet_active';
+	disa0.children[1].children[1].children[0].className = 'bullet bullet_active';
+	disa0.children[1].children[1].children[1].className = 'bullet bullet_active';
 
-	disa0.children[2].children[0].children[0].className = 'bullet_active';
-	disa0.children[2].children[1].children[0].className = 'bullet_active';
-	disa0.children[2].children[1].children[1].className = 'bullet_active';
+	disa0.children[2].children[0].children[0].className = 'bullet bullet_active';
+	disa0.children[2].children[1].children[0].className = 'bullet bullet_active';
+	disa0.children[2].children[1].children[1].className = 'bullet bullet_active';
 
-	disa1.children[0].children[0].children[0].className = 'bullet_active';
-	disa1.children[0].children[1].children[0].className = 'bullet_active';
-	disa1.children[0].children[1].children[1].className = 'bullet_active';
+	disa1.children[0].children[0].children[0].className = 'bullet bullet_active';
+	disa1.children[0].children[1].children[0].className = 'bullet bullet_active';
+	disa1.children[0].children[1].children[1].className = 'bullet bullet_active';
 
-	disa1.children[1].children[1].children[0].className = 'bullet_active';
-	disa1.children[1].children[1].children[1].className = 'bullet_active';
+	disa1.children[1].children[1].children[0].className = 'bullet bullet_active';
+	disa1.children[1].children[1].children[1].className = 'bullet bullet_active';
 
-	disa1.children[2].children[0].children[0].className = 'bullet_active';
-	disa1.children[2].children[1].children[0].className = 'bullet_active';
-	disa1.children[2].children[1].children[1].className = 'bullet_active';
+	disa1.children[2].children[0].children[0].className = 'bullet bullet_active';
+	disa1.children[2].children[1].children[0].className = 'bullet bullet_active';
+	disa1.children[2].children[1].children[1].className = 'bullet bullet_active';
 
-	disa2.children[0].children[0].children[0].className = 'bullet_active';
+	disa2.children[0].children[0].children[0].className = 'bullet bullet_active';
 
-	disa2.children[1].children[1].children[0].className = 'bullet_active';
-	disa2.children[1].children[1].children[1].className = 'bullet_active';
+	disa2.children[1].children[1].children[0].className = 'bullet bullet_active';
+	disa2.children[1].children[1].children[1].className = 'bullet bullet_active';
 
-	disa2.children[2].children[0].children[0].className = 'bullet_active';
+	disa2.children[2].children[0].children[0].className = 'bullet bullet_active';
 	sysQuestion = [1, 2, 2, 0, 0, 3, 0, 2, 1];
 	level++;
 }
 level1();
 
 function level2(){
-	disa0.children[0].children[0].children[0].className = 'bullet_active';
-	disa0.children[0].children[1].children[0].className = 'bullet_active';
-	disa0.children[0].children[1].children[1].className = 'bullet_active';
+	//1
+	disa0.children[0].children[0].children[0].className = 'bullet bullet_active';
+	disa0.children[0].children[0].children[1].className = 'bullet bullet_active';
+	//2
+	disa0.children[1].children[0].children[0].className = 'bullet bullet_active';
 
-	disa0.children[1].children[1].children[0].className = 'bullet_active';
-	disa0.children[1].children[1].children[1].className = 'bullet_active';
-
-	disa0.children[2].children[0].children[0].className = 'bullet_active';
-	disa0.children[2].children[1].children[0].className = 'bullet_active';
-	disa0.children[2].children[1].children[1].className = 'bullet_active';
-
-	disa1.children[0].children[0].children[0].className = 'bullet_active';
-	disa1.children[0].children[1].children[0].className = 'bullet_active';
-	disa1.children[0].children[1].children[1].className = 'bullet_active';
-
-	disa1.children[1].children[1].children[0].className = 'bullet_active';
-	disa1.children[1].children[1].children[1].className = 'bullet_active';
-
-	disa1.children[2].children[0].children[0].className = 'bullet_active';
-	disa1.children[2].children[1].children[0].className = 'bullet_active';
-	disa1.children[2].children[1].children[1].className = 'bullet_active';
-
-	disa2.children[0].children[0].children[0].className = 'bullet_active';
-
-	disa2.children[1].children[1].children[0].className = 'bullet_active';
-	disa2.children[1].children[1].children[1].className = 'bullet_active';
-
-	disa2.children[2].children[0].children[0].className = 'bullet_active';
-	sysQuestion = [1, 2, 2, 0, 0, 3, 0, 2, 3];
+	disa0.children[2].children[0].children[0].className = 'bullet bullet_active';
+	//3
+	disa1.children[0].children[1].children[0].className = 'bullet bullet_active';
+	disa1.children[0].children[1].children[1].className = 'bullet bullet_active';
+	//4
+	disa1.children[1].children[1].children[0].className = 'bullet bullet_active';
+	disa1.children[1].children[1].children[1].className = 'bullet bullet_active';
+	//5
+	// disa1.children[2].children[0].children[0].className = 'bullet bullet_active';
+	//6
+	disa2.children[0].children[0].children[0].className = 'bullet bullet_active';
+	disa2.children[0].children[0].children[1].className = 'bullet bullet_active';
+	//7
+	disa2.children[1].children[1].children[0].className = 'bullet bullet_active';
+	disa2.children[2].children[1].children[1].className = 'bullet bullet_active';
+	//8
+	// disa2.children[2].children[0].children[0].className = 'bullet bullet_active';
+	sysQuestion = [1, 2, 0, 3, 1, 0, 1, 2, 1];
 	level++;
 }
 
@@ -130,6 +132,11 @@ function resetLevel(){
 
 	userAnswer = [0, 0, 0, 0, 0, 0, 0, 0, 0];
 	document.querySelectorAll('.dis__col').forEach(el => el.style.transform = 'rotate(0deg)');
+
+	for(let i = 0; i < clsBul.length; i++){
+		clsBul[i].className = 'bullet';
+	}
+
 }
 
 function isCheckOnTrue(){
@@ -285,6 +292,40 @@ function moveTouch(e){//отслеживание действий при дви�
 function isShowHideLevelComp(){
 	lvl.classList.toggle('level__complete');
 }
+
+function mainMenu(){
+	document.querySelector('.main').classList.toggle('main__menu_hide');
+}
+
+function isShowHideHint(cls){
+	if (needCollect.classList.contains('need__collect_hide')) {
+		if(level == 1){
+			cls = arrCollect[level-1];
+		}
+		else if(level == 2){
+			cls = arrCollect[level-1];
+		}
+		needCollect.classList.remove('need__collect_hide');
+		needCollect.classList.add('need__collect_show');
+		needCollect.classList.add(cls);
+	}
+	else{
+		if(level == 1){
+			cls = arrCollect[level-1];
+		}
+		else if(level == 2){
+			cls = arrCollect[level-1];
+		}
+		needCollect.classList.remove('need__collect_show');
+		needCollect.classList.remove(cls);
+		needCollect.classList.add('need__collect_hide');
+	}
+	console.log(level);
+}
+
+hint.onclick = isShowHideHint;
+
+play.onclick = mainMenu;
 
 lvlNext.onclick = isShowHideLevelComp;
 
